@@ -1,0 +1,10 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="lightning-fill" clip-path="url(#clip0_0_247)">
+<path id="Vector (Stroke)" d="M8.43854 0.0508429C8.5893 0.138531 8.65971 0.318585 8.60842 0.485282L7.25773 4.875H9.75C9.89961 4.875 10.0349 4.96393 10.0942 5.10126C10.1536 5.2386 10.1256 5.39807 10.0231 5.50701L4.02308 11.882C3.90354 12.009 3.71222 12.0368 3.56146 11.9492C3.4107 11.8615 3.34029 11.6814 3.39158 11.5147L4.74227 7.125H2.25C2.10039 7.125 1.9651 7.03607 1.90576 6.89874C1.84642 6.7614 1.87439 6.60193 1.97692 6.49299L7.97692 0.117988C8.09646 -0.00901696 8.28778 -0.0368455 8.43854 0.0508429Z" fill-rule="evenodd" clip-rule="evenodd" fill="white"/>
+</g>
+<defs>
+<clipPath id="clip0_0_247">
+<rect width="12" height="12" fill="white"/>
+</clipPath>
+</defs>
+</svg>

@@ -1,0 +1,20 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="61.44" height="125.44" viewBox="0 0 61.44 125.44" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Device Illustration">
+<rect id="Back glass" x="0.48" y="0.48" width="60.48" height="124.48" rx="13.6" fill="url(#paint0_linear_0_364)" stroke-width="0.96" stroke="#A8A29A"/>
+<rect id="Camera plateau" x="5.44" y="5.44" width="28.8" height="28.8" rx="8" fill="#D8D2C9" stroke-width="0.64" stroke="#B3ADA4"/>
+<circle id="Lens" cx="11.84" cy="11.84" r="5.44" fill="#2A2A2C"/>
+<circle id="Glass" cx="11.84" cy="11.84" r="2.56" fill="#0F1A2B" stroke-width="0.64" stroke="#4A4A4E"/>
+<circle id="Lens_2" cx="11.84" cy="25.28" r="5.44" fill="#2A2A2C"/>
+<circle id="Glass_2" cx="11.84" cy="25.28" r="2.56" fill="#0F1A2B" stroke-width="0.64" stroke="#4A4A4E"/>
+<circle id="Lens_3" cx="22.72" cy="18.56" r="5.44" fill="#2A2A2C"/>
+<circle id="Glass_3" cx="22.72" cy="18.56" r="2.56" fill="#0F1A2B" stroke-width="0.64" stroke="#4A4A4E"/>
+<circle id="Flash" cx="30.08" cy="10.24" r="1.92" fill="#F3EFE6"/>
+<circle id="LiDAR" cx="30.08" cy="29.44" r="1.92" fill="#2A2A2C"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_0_364" x1="0" y1="0" x2="70.7891" y2="34.6722" gradientUnits="userSpaceOnUse">
+<stop stop-color="#E6E1D9"/>
+<stop offset="1" stop-color="#C9C3BA"/>
+</linearGradient>
+</defs>
+</svg>
