@@ -51,7 +51,8 @@ public struct SpeedTestMeasurements: Codable, Sendable, Equatable {
     public var downloadLatencyMs: Double?
     public var uploadLatencyMs: Double?
     public var jitterMs: Double?
-    /// Always nil: packet loss needs dedicated UDP infrastructure that does not exist yet.
+    /// Percentage of failed idle HTTP probes. This measures application-level loss
+    /// to the test server, not packet loss at every network hop.
     public var packetLossPercentage: Double?
 
     public init(

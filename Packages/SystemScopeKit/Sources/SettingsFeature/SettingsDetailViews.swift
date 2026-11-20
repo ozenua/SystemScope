@@ -55,7 +55,7 @@ struct MyDeviceView: View {
                 }
                 .buttonStyle(.plain)
                 .disabled(model.isRefreshingDevice)
-                SettingsRow(icon: .close, title: L("Reset local device profile"), subtitle: L("Restores the default name. History is kept."), destructive: true, showsChevron: false) {
+                SettingsRow(icon: .close, title: L("Reset local device profile"), subtitle: L("Restores your iPhone's detected name. History is kept."), destructive: true, showsChevron: false) {
                     model.dialog = .resetDeviceProfile
                 }
             }

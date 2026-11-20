@@ -40,6 +40,12 @@ xcodebuild -project SystemScope.xcodeproj -scheme SystemScope -destination 'plat
 cd Packages/SystemScopeKit && xcodebuild test -scheme SystemScopeKit -destination 'platform=iOS Simulator,name=iPhone 17 Pro'
 ```
 
+For development signing with an Apple Personal Team, the project keeps
+`WIFI_INFORMATION_ENABLED` disabled because free provisioning does not support
+the Access Wi-Fi Information entitlement. Connection type, status, Low Data
+Mode, expensive-network state, and cellular technology remain available; Wi-Fi
+SSID, BSSID and security are shown as unavailable in that build.
+
 Debug-only launch arguments:
 
 | Argument | Effect |
@@ -270,8 +276,9 @@ Recorded here per PRD §0 until the decision log has a home.
   HTTP round trip from URLSessionTaskMetrics; jitter is the mean absolute difference
   of consecutive samples. Loaded latency is sampled during each transfer rather than
   as a separate phase.
-- **Speed test: not built.** Packet loss (always "Unavailable"), the Advanced
-  profile, history trends/comparison/filtering/export, and "Reconnecting" as a
+- **Speed test:** Packet loss is measured as failed idle HTTP probes to the selected
+  test server; it is application-level loss, not an ICMP/UDP path-wide measurement.
+  The Advanced profile, history trends/comparison/filtering/export, and "Reconnecting" as a
   distinct connection state. History is a list with delete.
 - **Speed test: result model** uses typed enums instead of the note's strings, and
   has no `status` field because only completed tests are stored. History is a JSON

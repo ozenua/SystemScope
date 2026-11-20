@@ -388,7 +388,9 @@ struct GraphicsView: View {
                 trailingAction: { model.copy([gpu?.name, family, capabilities.contains(.metal3) ? "Metal 3" : nil].compactMap { $0 }.joined(separator: " · ")) }
             )
             VStack(alignment: .leading, spacing: 14) {
-                GPUCoreGraphic(cores: specs?.gpuCoreCount ?? 6)
+                if let cores = specs?.gpuCoreCount {
+                    GPUCoreGraphic(cores: cores)
+                }
                 Text(gpu?.name ?? Fallback.unavailable)
                     .font(.system(size: 30, weight: .bold))
                     .tracking(-1.2)
@@ -405,9 +407,12 @@ struct GraphicsView: View {
             DeviceSectionTitle(title: L("Graphics specifications"))
             SpecificationCard(specs: [
                 Spec(label: L("Metal feature set"), value: gpu.map { _ in capabilities.contains(.metal3) ? "Metal 3" : (gpu?.metalAvailable == true ? "Metal" : L("Not available")) }, kind: .copyable),
+                Spec(label: L("GPU architecture"), value: gpu?.architecture),
                 Spec(label: L("GPU families"), value: gpu.map { $0.families.filter { !$0.hasPrefix("Metal") }.joined(separator: " · ") }.flatMap { $0.isEmpty ? nil : $0 }),
+                Spec(label: L("Unified memory"), value: gpu?.hasUnifiedMemory.map { $0 ? L("Supported") : L("Unavailable") }),
                 Spec(label: L("Ray tracing"), value: gpu.map { _ in capabilities.contains(.rayTracing) ? L("Supported") : L("Not supported") }),
                 Spec(label: L("Max threads per group"), value: gpu?.maxThreadsPerThreadgroup.map(String.init)),
+                Spec(label: L("Max threadgroup memory"), value: gpu?.maxThreadgroupMemoryBytes.map { ByteFormatting.memory(UInt64($0), fractionDigits: 0) }),
                 Spec(label: L("Recommended working set"), value: gpu?.recommendedMaxWorkingSetBytes.map { ByteFormatting.memory($0, fractionDigits: 1) }),
                 Spec(label: L("Hardware generation"), value: family.map { name in specs?.releaseYear.map { "\(name) (\($0))" } ?? name }),
             ], onCopy: { model.copy($0) })

@@ -1,1 +1,210 @@
-{"sourceLanguage":"en","strings":{},"version":"1.0"}
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "%lld min" : {
+
+    },
+    "%lld minutes recorded" : {
+
+    },
+    "After" : {
+
+    },
+    "Alert threshold" : {
+
+    },
+    "an unknown state" : {
+
+    },
+    "At %lld%% battery" : {
+
+    },
+    "Available" : {
+
+    },
+    "Available storage is below %lld%% of capacity." : {
+
+    },
+    "Battery level" : {
+
+    },
+    "Battery level dropped" : {
+
+    },
+    "Battery level is low" : {
+
+    },
+    "Battery reached %lld%%" : {
+
+    },
+    "Before" : {
+
+    },
+    "Capacity" : {
+
+    },
+    "Charging started" : {
+
+    },
+    "Charging state" : {
+
+    },
+    "Charging stopped" : {
+
+    },
+    "Close demanding apps, stop charging for a while or move out of the sun." : {
+
+    },
+    "Connected to %@" : {
+
+    },
+    "Consider turning on Low Power Mode" : {
+
+    },
+    "Device entered %@ state" : {
+
+    },
+    "Disconnected" : {
+
+    },
+    "Duration" : {
+
+    },
+    "Elevated thermal condition" : {
+
+    },
+    "iOS asked SystemScope to free memory" : {
+
+    },
+    "iOS reported that your iPhone’s thermal state changed from %@ to %@." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "iOS reported that your iPhone’s thermal state changed from %1$@ to %2$@."
+          }
+        }
+      }
+    },
+    "iOS reported the %@ thermal state. iOS may reduce performance until the device cools." : {
+
+    },
+    "It reduces background activity until you can charge your iPhone." : {
+
+    },
+    "Let your iPhone cool down" : {
+
+    },
+    "Low Power Mode" : {
+
+    },
+    "Low Power Mode turned off" : {
+
+    },
+    "Low Power Mode turned on" : {
+
+    },
+    "Measured" : {
+
+    },
+    "Memory warning received" : {
+
+    },
+    "Monitoring session ended" : {
+
+    },
+    "Monitoring session interrupted" : {
+
+    },
+    "Network connection changed" : {
+
+    },
+    "New state" : {
+
+    },
+    "No connection" : {
+
+    },
+    "Not charging" : {
+
+    },
+    "Observations" : {
+
+    },
+    "Off" : {
+
+    },
+    "On" : {
+
+    },
+    "Only %@ of %@ is available. Some features may stop working when storage is full." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Only %1$@ of %2$@ is available. Some features may stop working when storage is full."
+          }
+        }
+      }
+    },
+    "Plugged in at %lld%%" : {
+
+    },
+    "Previous state" : {
+
+    },
+    "Review large apps and media" : {
+
+    },
+    "Settings › General › iPhone Storage shows what uses the most space." : {
+
+    },
+    "Stopped when SystemScope was closed." : {
+
+    },
+    "Storage running low" : {
+
+    },
+    "SystemScope monitoring session" : {
+
+    },
+    "Thermal state changed" : {
+
+    },
+    "This app" : {
+
+    },
+    "This iPhone" : {
+
+    },
+    "Time of transition" : {
+
+    },
+    "Unavailable" : {
+
+    },
+    "Unknown" : {
+
+    },
+    "Unplugged at %lld%%" : {
+
+    },
+    "Your battery reached %lld%%, at or below the %lld%% alert threshold. Your iPhone wasn’t charging at the time." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Your battery reached %1$lld%%, at or below the %2$lld%% alert threshold. Your iPhone wasn’t charging at the time."
+          }
+        }
+      }
+    },
+    "Your battery reached your %lld%% alert threshold." : {
+
+    },
+    "Your device entered the %@ thermal state." : {
+
+    }
+  },
+  "version" : "1.0"
+}

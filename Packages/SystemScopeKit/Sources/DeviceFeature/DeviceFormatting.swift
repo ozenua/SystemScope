@@ -115,6 +115,7 @@ enum DeviceReport {
         let summary = model.summary
         let details = model.details
         let specs = model.specifications
+        let cpu = details?.cpu
         func line(_ label: String, _ value: String?, fallback: String = Fallback.unavailable) -> String {
             "\(label): \(value ?? fallback)"
         }
@@ -126,12 +127,19 @@ enum DeviceReport {
             line(L("Build number"), details?.osBuild),
             line(L("Processor"), summary.processor, fallback: Fallback.notInCatalogue),
             line(L("CPU cores"), summary.processorCoreCount.map(String.init)),
+            line(L("Performance cores"), cpu?.performanceCores.map(String.init)),
+            line(L("Efficiency cores"), cpu?.efficiencyCores.map(String.init)),
+            line(L("L1 cache"), cpu?.l1DataCacheBytes.map { ByteFormatting.memory(UInt64($0), fractionDigits: 0) }),
+            line(L("L2 cache"), cpu?.l2CacheBytes.map { ByteFormatting.memory(UInt64($0), fractionDigits: 0) }),
+            line(L("L3 cache"), cpu?.l3CacheBytes.map { ByteFormatting.memory(UInt64($0), fractionDigits: 0) }),
             line(L("Physical memory"), DeviceFormat.memory(summary.physicalMemoryBytes)),
             line(L("Storage"), DeviceFormat.storage(summary.storageTotalBytes)),
             line(L("Resolution"), DeviceFormat.pixels(details?.display)),
             line(L("Maximum refresh rate"), details?.display?.maximumFramesPerSecond.map { "\($0) Hz" }),
             line(L("Screen size"), DeviceFormat.diagonal(specs?.screenDiagonalInches), fallback: Fallback.notInCatalogue),
             line(L("GPU"), model.gpu?.name),
+            line(L("GPU architecture"), model.gpu?.architecture),
+            line(L("Recommended GPU working set"), model.gpu?.recommendedMaxWorkingSetBytes.map { ByteFormatting.memory($0, fractionDigits: 1) }),
             line(L("Cameras"), details.map { "\($0.cameras.count)" }),
         ]
         if let updated = model.lastUpdated {

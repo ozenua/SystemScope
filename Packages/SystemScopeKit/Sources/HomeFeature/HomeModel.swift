@@ -114,6 +114,12 @@ public final class HomeModel {
         hasLoaded = true
     }
 
+    /// Refreshes live connection and interface counters without rescanning the
+    /// rest of the Home tab.
+    public func refreshNetwork() async {
+        network = await networkInspector.readNetwork()
+    }
+
     public func loadUsage() async {
         let range = selectedRange
         usage[range] = await insights.dataUsage(for: range)

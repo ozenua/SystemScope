@@ -1,1 +1,673 @@
-{"sourceLanguage":"en","strings":{},"version":"1.0"}
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "%@ · %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ · %2$@"
+          }
+        }
+      }
+    },
+    "%@ · started %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ · started %2$@"
+          }
+        }
+      }
+    },
+    "%@ ›" : {
+
+    },
+    "%@ alert" : {
+
+    },
+    "%@ unavailable" : {
+
+    },
+    "%@, %@ – now" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@, %2$@ – now"
+          }
+        }
+      }
+    },
+    "%lld" : {
+
+    },
+    "%lld activity records were removed. Alerts, sessions, your device profile and settings were kept." : {
+
+    },
+    "%lld minutes recorded" : {
+
+    },
+    "%lld results for “%@”" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$lld results for “%2$@”"
+          }
+        }
+      }
+    },
+    "%lldm" : {
+
+    },
+    "7 days" : {
+
+    },
+    "30 days" : {
+
+    },
+    "90 days" : {
+
+    },
+    "A session is saved each time you leave the Monitor tab." : {
+
+    },
+    "Activity" : {
+
+    },
+    "Activity is stored only on this iPhone and is never sent anywhere." : {
+
+    },
+    "Activity settings" : {
+
+    },
+    "After" : {
+
+    },
+    "Alert actions" : {
+
+    },
+    "Alert deleted" : {
+
+    },
+    "Alert details" : {
+
+    },
+    "Alert dismissed" : {
+
+    },
+    "Alert resolved" : {
+
+    },
+    "Alerts" : {
+
+    },
+    "Alerts appear when a reading crosses a threshold while SystemScope is open." : {
+
+    },
+    "Alerts generated" : {
+
+    },
+    "All" : {
+
+    },
+    "All activity" : {
+
+    },
+    "All dates" : {
+
+    },
+    "Attention" : {
+
+    },
+    "Back" : {
+
+    },
+    "Battery" : {
+
+    },
+    "Battery Monitor" : {
+
+    },
+    "Battery monitoring" : {
+
+    },
+    "Before" : {
+
+    },
+    "Calculated from %lld observations recorded in this session." : {
+
+    },
+    "Cancel" : {
+
+    },
+    "Category" : {
+
+    },
+    "Clear" : {
+
+    },
+    "Clear activity history" : {
+
+    },
+    "Clear activity history?" : {
+
+    },
+    "Clear filters" : {
+
+    },
+    "Clear history" : {
+
+    },
+    "Clear search" : {
+
+    },
+    "Clearing history…" : {
+
+    },
+    "Close" : {
+
+    },
+    "Collapsed" : {
+
+    },
+    "Compact rows" : {
+
+    },
+    "Completed" : {
+
+    },
+    "Conditions worth your attention" : {
+
+    },
+    "Copied to clipboard" : {
+
+    },
+    "Copy" : {
+
+    },
+    "Copy %@" : {
+
+    },
+    "Copy details" : {
+
+    },
+    "Couldn’t clear history" : {
+
+    },
+    "Couldn’t load activity" : {
+
+    },
+    "CPU Monitor" : {
+
+    },
+    "Critical" : {
+
+    },
+    "DATA" : {
+
+    },
+    "Date" : {
+
+    },
+    "Delete" : {
+
+    },
+    "Delete alert" : {
+
+    },
+    "Delete event" : {
+
+    },
+    "Dismiss" : {
+
+    },
+    "Dismissed" : {
+
+    },
+    "DISPLAY" : {
+
+    },
+    "Done" : {
+
+    },
+    "Earlier" : {
+
+    },
+    "Ended" : {
+
+    },
+    "Event deleted" : {
+
+    },
+    "Event details" : {
+
+    },
+    "Events" : {
+
+    },
+    "Events appear here as SystemScope monitors your iPhone." : {
+
+    },
+    "Expanded" : {
+
+    },
+    "Export" : {
+
+    },
+    "Export activity" : {
+
+    },
+    "Failed" : {
+
+    },
+    "Filter activity" : {
+
+    },
+    "Filters on" : {
+
+    },
+    "Find events, alerts and sessions by name, category or date." : {
+
+    },
+    "Forever" : {
+
+    },
+    "Group by date" : {
+
+    },
+    "Hide descriptions in the timeline" : {
+
+    },
+    "HISTORY" : {
+
+    },
+    "History cleared" : {
+
+    },
+    "In progress" : {
+
+    },
+    "Information" : {
+
+    },
+    "Interrupted" : {
+
+    },
+    "It may have been deleted or removed by your retention setting." : {
+
+    },
+    "Item not found" : {
+
+    },
+    "Keep activity for" : {
+
+    },
+    "Keep resolved items in the feed" : {
+
+    },
+    "Last 7 days" : {
+
+    },
+    "Last 30 days" : {
+
+    },
+    "Last activity %@" : {
+
+    },
+    "Latest" : {
+
+    },
+    "Live readings for this category" : {
+
+    },
+    "Load older activity" : {
+
+    },
+    "Loading activity" : {
+
+    },
+    "Mark as read" : {
+
+    },
+    "Mark as resolved" : {
+
+    },
+    "Mark as unread" : {
+
+    },
+    "Marked by you" : {
+
+    },
+    "Measurements" : {
+
+    },
+    "Metrics collected" : {
+
+    },
+    "min so far" : {
+
+    },
+    "minutes" : {
+
+    },
+    "Monitor" : {
+
+    },
+    "Monitored today" : {
+
+    },
+    "Monitored total" : {
+
+    },
+    "Monitoring session" : {
+
+    },
+    "Need attention" : {
+
+    },
+    "Needs attention" : {
+
+    },
+    "Network" : {
+
+    },
+    "Network Monitor" : {
+
+    },
+    "Network monitoring" : {
+
+    },
+    "New" : {
+
+    },
+    "New state" : {
+
+    },
+    "Newest first" : {
+
+    },
+    "No activity recorded yet" : {
+
+    },
+    "No activity yet" : {
+
+    },
+    "No alerts" : {
+
+    },
+    "No matching activity" : {
+
+    },
+    "No matching alerts" : {
+
+    },
+    "No results" : {
+
+    },
+    "No sessions in this range" : {
+
+    },
+    "No sessions yet" : {
+
+    },
+    "None for this event" : {
+
+    },
+    "None yet" : {
+
+    },
+    "Nothing matches “%@”. Search covers titles, details, categories and dates." : {
+
+    },
+    "Nothing matches these filters. Try another category or clear the filters." : {
+
+    },
+    "Nothing was removed. Your history is unchanged. Try again." : {
+
+    },
+    "Observations" : {
+
+    },
+    "Observations: %lld" : {
+
+    },
+    "Observed information" : {
+
+    },
+    "Older activity" : {
+
+    },
+    "Older items are removed automatically" : {
+
+    },
+    "Oldest first" : {
+
+    },
+    "Open Monitor" : {
+
+    },
+    "Opening an alert doesn’t resolve it. You decide when it’s resolved." : {
+
+    },
+    "Paused" : {
+
+    },
+    "Performance" : {
+
+    },
+    "Performance monitoring" : {
+
+    },
+    "Previous %@" : {
+
+    },
+    "Previous state" : {
+
+    },
+    "Read" : {
+
+    },
+    "Recent searches" : {
+
+    },
+    "Recent searches stay on this iPhone. Up to 10 are kept." : {
+
+    },
+    "Recommended action" : {
+
+    },
+    "Record monitoring sessions" : {
+
+    },
+    "Recorded" : {
+
+    },
+    "Recorded by" : {
+
+    },
+    "Recorded events" : {
+
+    },
+    "Recording" : {
+
+    },
+    "Related" : {
+
+    },
+    "Related alerts" : {
+
+    },
+    "Removes %lld items from this iPhone" : {
+
+    },
+    "Removing activity records from this iPhone." : {
+
+    },
+    "Reopen alert" : {
+
+    },
+    "Reset" : {
+
+    },
+    "Resolved" : {
+
+    },
+    "Resolved %@" : {
+
+    },
+    "Save a summary when you leave a monitor" : {
+
+    },
+    "Save as CSV to Files" : {
+
+    },
+    "Scope" : {
+
+    },
+    "Search activity" : {
+
+    },
+    "Search your activity" : {
+
+    },
+    "Session deleted" : {
+
+    },
+    "Session details" : {
+
+    },
+    "Session ended" : {
+
+    },
+    "Session ended after %lld minutes" : {
+
+    },
+    "Session interrupted" : {
+
+    },
+    "Session recording is off in Activity settings." : {
+
+    },
+    "Session started" : {
+
+    },
+    "Session timeline" : {
+
+    },
+    "Sessions" : {
+
+    },
+    "Severity" : {
+
+    },
+    "Show %lld results" : {
+
+    },
+    "Show resolved alerts" : {
+
+    },
+    "Show Today, Yesterday and older headers" : {
+
+    },
+    "Sort by" : {
+
+    },
+    "Source" : {
+
+    },
+    "Source: %@" : {
+
+    },
+    "Started" : {
+
+    },
+    "Status" : {
+
+    },
+    "Storage" : {
+
+    },
+    "Storage Monitor" : {
+
+    },
+    "Thermal" : {
+
+    },
+    "Thermal Monitor" : {
+
+    },
+    "This item is no longer available" : {
+
+    },
+    "This month" : {
+
+    },
+    "This week" : {
+
+    },
+    "This will permanently remove %lld activity records from SystemScope. Alerts, sessions, your device profile and settings are kept." : {
+
+    },
+    "Time" : {
+
+    },
+    "Today" : {
+
+    },
+    "Today, %@" : {
+
+    },
+    "Total" : {
+
+    },
+    "Try a longer range." : {
+
+    },
+    "Try again" : {
+
+    },
+    "Try another status or severity." : {
+
+    },
+    "Unread" : {
+
+    },
+    "Unresolved" : {
+
+    },
+    "View %@" : {
+
+    },
+    "View in %@" : {
+
+    },
+    "What happened" : {
+
+    },
+    "What happened?" : {
+
+    },
+    "Yesterday" : {
+
+    },
+    "Yesterday, %@" : {
+
+    },
+    "You left the Monitor" : {
+
+    },
+    "Your device history and events" : {
+
+    },
+    "Your history is still on this iPhone. Try again in a moment." : {
+
+    },
+    "Your monitoring history" : {
+
+    }
+  },
+  "version" : "1.0"
+}

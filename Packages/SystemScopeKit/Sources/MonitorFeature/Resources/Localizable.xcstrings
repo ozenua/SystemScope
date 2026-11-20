@@ -1,1 +1,911 @@
-{"sourceLanguage":"en","strings":{},"version":"1.0"}
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "% used" : {
+
+    },
+    "%@ → %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ → %2$@"
+          }
+        }
+      }
+    },
+    "%@ available" : {
+
+    },
+    "%@ of %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ of %2$@"
+          }
+        }
+      }
+    },
+    "%@ of storage is available. Offloading unused apps keeps space free." : {
+
+    },
+    "%@, latest %@, from %lld observations" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@, latest %2$@, from %3$lld observations"
+          }
+        }
+      }
+    },
+    "%lld (%lld performance + %lld efficiency)" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$lld (%2$lld performance + %3$lld efficiency)"
+          }
+        }
+      }
+    },
+    "%lld observations" : {
+
+    },
+    "%lld%% used" : {
+
+    },
+    "%lldP + %lldE" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$lldP + %2$lldE"
+          }
+        }
+      }
+    },
+    "1 hour" : {
+
+    },
+    "5 min" : {
+
+    },
+    "7 Days" : {
+
+    },
+    "15 min" : {
+
+    },
+    "30 Days" : {
+
+    },
+    "32-bit float filtering" : {
+
+    },
+    "Active" : {
+
+    },
+    "Active cores" : {
+
+    },
+    "Activity" : {
+
+    },
+    "Alerts" : {
+
+    },
+    "Alerts appear here when a reading crosses one of your thresholds." : {
+
+    },
+    "App activity" : {
+
+    },
+    "App memory footprint" : {
+
+    },
+    "App-only. iOS doesn’t expose total device CPU." : {
+
+    },
+    "Apple%lld family" : {
+
+    },
+    "Apple%lld GPU family" : {
+
+    },
+    "Architecture" : {
+
+    },
+    "At Serious and Critical, iOS may slow things down, dim the display or pause charging to protect your iPhone." : {
+
+    },
+    "Attention" : {
+
+    },
+    "Available" : {
+
+    },
+    "Available · %@" : {
+
+    },
+    "Available · not in use" : {
+
+    },
+    "Available process memory" : {
+
+    },
+    "Average" : {
+
+    },
+    "Back" : {
+
+    },
+    "Based on the current connection" : {
+
+    },
+    "Battery" : {
+
+    },
+    "Battery activity" : {
+
+    },
+    "Battery Health" : {
+
+    },
+    "Battery information" : {
+
+    },
+    "Battery is low and not charging. Low Power Mode can be turned on in iPhone Settings." : {
+
+    },
+    "Battery level" : {
+
+    },
+    "Battery level not reported by iOS." : {
+
+    },
+    "Battery state" : {
+
+    },
+    "Battery state source and observation times" : {
+
+    },
+    "BC textures" : {
+
+    },
+    "Categories like Photos or Apps aren’t shown. iOS doesn’t let apps read the full iPhone Storage breakdown." : {
+
+    },
+    "Cellular" : {
+
+    },
+    "Cellular connected" : {
+
+    },
+    "Changes are recorded while SystemScope is open." : {
+
+    },
+    "Charge, charging and available battery information" : {
+
+    },
+    "Charging" : {
+
+    },
+    "Chip" : {
+
+    },
+    "Collapsed" : {
+
+    },
+    "Collecting available measurements…" : {
+
+    },
+    "Collecting readings…" : {
+
+    },
+    "Compressed" : {
+
+    },
+    "Connected" : {
+
+    },
+    "Connected · Internet verified" : {
+
+    },
+    "Connected to" : {
+
+    },
+    "Connection" : {
+
+    },
+    "Connection and device traffic" : {
+
+    },
+    "Consider Low Power Mode" : {
+
+    },
+    "Copied" : {
+
+    },
+    "Copy" : {
+
+    },
+    "Core count isn't reported on this device." : {
+
+    },
+    "cores" : {
+
+    },
+    "CPU" : {
+
+    },
+    "CPU app activity" : {
+
+    },
+    "CPU time SystemScope used in the last second, as a share of all cores." : {
+
+    },
+    "CPU time used by SystemScope" : {
+
+    },
+    "Critical" : {
+
+    },
+    "Current process footprint" : {
+
+    },
+    "Current thermal state" : {
+
+    },
+    "Cycle count, maximum capacity and battery temperature aren’t available to apps. You can find battery health in iOS Settings." : {
+
+    },
+    "Device inspection source and rendering features" : {
+
+    },
+    "Device memory and app diagnostics" : {
+
+    },
+    "Device memory statistics couldn't be read." : {
+
+    },
+    "Device performance & resources" : {
+
+    },
+    "Device spec" : {
+
+    },
+    "Device specification" : {
+
+    },
+    "Device traffic" : {
+
+    },
+    "Device traffic since restart" : {
+
+    },
+    "Download" : {
+
+    },
+    "Elevated" : {
+
+    },
+    "Estimated used capacity" : {
+
+    },
+    "Ethernet" : {
+
+    },
+    "Ethernet connected" : {
+
+    },
+    "Events and monitoring sessions will be listed here." : {
+
+    },
+    "Every second while Monitor is open" : {
+
+    },
+    "Expanded" : {
+
+    },
+    "Expensive / constrained" : {
+
+    },
+    "Fair" : {
+
+    },
+    "Fully charged" : {
+
+    },
+    "getrusage (this process)" : {
+
+    },
+    "Good" : {
+
+    },
+    "GPU" : {
+
+    },
+    "GPU details couldn't be read." : {
+
+    },
+    "GPU families" : {
+
+    },
+    "Graphics capabilities and available performance information" : {
+
+    },
+    "Graphics capability" : {
+
+    },
+    "Hardware ray tracing" : {
+
+    },
+    "High" : {
+
+    },
+    "High thermal condition" : {
+
+    },
+    "Highest CPU activity" : {
+
+    },
+    "Historical observations" : {
+
+    },
+    "host_statistics64 · task_vm_info" : {
+
+    },
+    "How heat affects performance" : {
+
+    },
+    "If your iPhone feels warm" : {
+
+    },
+    "In Settings › Battery" : {
+
+    },
+    "In use" : {
+
+    },
+    "in use of %@" : {
+
+    },
+    "Info" : {
+
+    },
+    "Interface" : {
+
+    },
+    "Internet connected" : {
+
+    },
+    "iOS %@" : {
+
+    },
+    "iOS asked SystemScope to free memory" : {
+
+    },
+    "iOS doesn’t share GPU utilization, clock speed or system-wide GPU activity. SystemScope shows capabilities instead." : {
+
+    },
+    "iOS keeps RAM in use by design — low free memory is normal. These figures are provisional until validated on physical devices." : {
+
+    },
+    "iOS reports thermal states, not temperatures. SystemScope never shows °C or °F readings." : {
+
+    },
+    "IP versions" : {
+
+    },
+    "Large videos and downloads are the quickest way to free up space." : {
+
+    },
+    "Last change %@ · %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Last change %1$@ · %2$@"
+          }
+        }
+      }
+    },
+    "Last memory warning" : {
+
+    },
+    "Last speed test %@ · %@ · %@ s" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Last speed test %1$@ · %2$@ · %3$@ s"
+          }
+        }
+      }
+    },
+    "Last successful update %@" : {
+
+    },
+    "Latency" : {
+
+    },
+    "Level" : {
+
+    },
+    "Limited" : {
+
+    },
+    "Live" : {
+
+    },
+    "Live session" : {
+
+    },
+    "Low" : {
+
+    },
+    "Low Power Mode" : {
+
+    },
+    "Lowest CPU activity" : {
+
+    },
+    "Max threads per group" : {
+
+    },
+    "Measured" : {
+
+    },
+    "Measurement source, sampling and limitations" : {
+
+    },
+    "Memory" : {
+
+    },
+    "Memory footprint" : {
+
+    },
+    "Memory in use" : {
+
+    },
+    "Memory in use couldn't be read." : {
+
+    },
+    "Memory warning" : {
+
+    },
+    "Metal" : {
+
+    },
+    "Metal 3" : {
+
+    },
+    "Metal compatibility" : {
+
+    },
+    "Metal version" : {
+
+    },
+    "Moderate" : {
+
+    },
+    "Monitor" : {
+
+    },
+    "Monitoring active" : {
+
+    },
+    "Monitoring paused" : {
+
+    },
+    "Needs to cool down" : {
+
+    },
+    "Network" : {
+
+    },
+    "Network details" : {
+
+    },
+    "Network health" : {
+
+    },
+    "Network name" : {
+
+    },
+    "Network name needs Apple's Wi-Fi information entitlement, which SystemScope doesn't have yet. Signal strength isn't available on iOS." : {
+
+    },
+    "No" : {
+
+    },
+    "No activity yet" : {
+
+    },
+    "No alerts" : {
+
+    },
+    "No changes this session" : {
+
+    },
+    "No history" : {
+
+    },
+    "No internet connection" : {
+
+    },
+    "No live GPU usage" : {
+
+    },
+    "No readings while SystemScope was closed" : {
+
+    },
+    "No reports yet" : {
+
+    },
+    "No saved sessions yet" : {
+
+    },
+    "No speed test yet" : {
+
+    },
+    "No stored observations yet" : {
+
+    },
+    "Nominal" : {
+
+    },
+    "None this session" : {
+
+    },
+    "Normal" : {
+
+    },
+    "Not available" : {
+
+    },
+    "Not charging" : {
+
+    },
+    "Not connected" : {
+
+    },
+    "Not enough history yet" : {
+
+    },
+    "Not supported" : {
+
+    },
+    "Not tested" : {
+
+    },
+    "Now" : {
+
+    },
+    "Observed device traffic on the active connection. Resets on restart, and isn't a carrier billing figure." : {
+
+    },
+    "of %@" : {
+
+    },
+    "Off" : {
+
+    },
+    "Offline" : {
+
+    },
+    "Offline media in apps like Music and Podcasts can add up. Manage it in Settings › General › iPhone Storage." : {
+
+    },
+    "On" : {
+
+    },
+    "Operating normally" : {
+
+    },
+    "Other network" : {
+
+    },
+    "Peak" : {
+
+    },
+    "Peak %@" : {
+
+    },
+    "Peak memory footprint" : {
+
+    },
+    "Peak process footprint" : {
+
+    },
+    "Peaks and memory warnings from past sessions will appear here." : {
+
+    },
+    "Performance reports" : {
+
+    },
+    "Physical RAM" : {
+
+    },
+    "ProcessInfo thermal state and change events" : {
+
+    },
+    "ProcessInfo.thermalState" : {
+
+    },
+    "Processor" : {
+
+    },
+    "Processor information and SystemScope’s CPU activity" : {
+
+    },
+    "Provisional: this measurement hasn't been validated on physical devices yet." : {
+
+    },
+    "Raster order groups" : {
+
+    },
+    "Ray tracing" : {
+
+    },
+    "Recent activity" : {
+
+    },
+    "Recent changes" : {
+
+    },
+    "Recommendations" : {
+
+    },
+    "Recommended" : {
+
+    },
+    "Recommended working set" : {
+
+    },
+    "Refresh" : {
+
+    },
+    "Refreshing… Showing your last readings until new ones arrive." : {
+
+    },
+    "Remove the case, move out of direct sunlight and pause games or camera use." : {
+
+    },
+    "Reports are delivered by iOS at most once a day, so they're never a live reading." : {
+
+    },
+    "Rest of iPhone · not visible to apps" : {
+
+    },
+    "Review downloaded content" : {
+
+    },
+    "Review large files" : {
+
+    },
+    "Run Speed Test" : {
+
+    },
+    "Running hot" : {
+
+    },
+    "s this session" : {
+
+    },
+    "Sampling" : {
+
+    },
+    "Scope" : {
+
+    },
+    "Serious" : {
+
+    },
+    "Session" : {
+
+    },
+    "Session average" : {
+
+    },
+    "Session history" : {
+
+    },
+    "Sessions will be listed once SystemScope keeps a history." : {
+
+    },
+    "Signal strength" : {
+
+    },
+    "Significant thermal condition" : {
+
+    },
+    "Since restart" : {
+
+    },
+    "Since restart · %@" : {
+
+    },
+    "Slightly elevated" : {
+
+    },
+    "Slightly warm" : {
+
+    },
+    "Source" : {
+
+    },
+    "Speed test" : {
+
+    },
+    "Standard monitoring" : {
+
+    },
+    "State" : {
+
+    },
+    "State history" : {
+
+    },
+    "Stopped when SystemScope left the foreground." : {
+
+    },
+    "Storage" : {
+
+    },
+    "Storage capacity and available space" : {
+
+    },
+    "Storage capacity couldn't be read." : {
+
+    },
+    "Supported" : {
+
+    },
+    "System state" : {
+
+    },
+    "SystemScope · %@" : {
+
+    },
+    "SystemScope app diagnostics" : {
+
+    },
+    "SystemScope CPU" : {
+
+    },
+    "SystemScope CPU %@, average %@, peak %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "SystemScope CPU %1$@, average %2$@, peak %3$@"
+          }
+        }
+      }
+    },
+    "SystemScope doesn't collect iOS performance reports yet." : {
+
+    },
+    "SystemScope doesn't store readings over time yet, so there's nothing to chart for this range." : {
+
+    },
+    "Technical details" : {
+
+    },
+    "Thermal" : {
+
+    },
+    "Thermal state" : {
+
+    },
+    "Thermal state changed" : {
+
+    },
+    "Thermal state couldn't be read." : {
+
+    },
+    "This app" : {
+
+    },
+    "This iPhone" : {
+
+    },
+    "This iPhone · of %@" : {
+
+    },
+    "This week" : {
+
+    },
+    "Today" : {
+
+    },
+    "Total cores" : {
+
+    },
+    "Total volume" : {
+
+    },
+    "Traffic counters aren't available for this connection." : {
+
+    },
+    "Trends" : {
+
+    },
+    "Trends appear once SystemScope has recorded enough readings while open." : {
+
+    },
+    "Turn it on in Control Center or Settings › Battery." : {
+
+    },
+    "UIDevice battery monitoring" : {
+
+    },
+    "Unavailable" : {
+
+    },
+    "Unified memory" : {
+
+    },
+    "Unknown" : {
+
+    },
+    "Unknown iPhone model" : {
+
+    },
+    "Updated" : {
+
+    },
+    "Updated %@" : {
+
+    },
+    "Updated just now" : {
+
+    },
+    "Upload" : {
+
+    },
+    "Usage trend" : {
+
+    },
+    "Use Low Power Mode when you need it" : {
+
+    },
+    "Used · %@" : {
+
+    },
+    "View all" : {
+
+    },
+    "Volume capacity for important usage" : {
+
+    },
+    "Volume capacity source and update time" : {
+
+    },
+    "What each state means" : {
+
+    },
+    "When iOS reports a change" : {
+
+    },
+    "Wi-Fi" : {
+
+    },
+    "Wi-Fi connected" : {
+
+    },
+    "Wired" : {
+
+    },
+    "Yes" : {
+
+    },
+    "Your iPhone’s current system thermal state" : {
+
+    }
+  },
+  "version" : "1.0"
+}

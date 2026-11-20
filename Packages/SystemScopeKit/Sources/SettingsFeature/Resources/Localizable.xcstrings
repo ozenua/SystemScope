@@ -1,1 +1,1025 @@
-{"sourceLanguage":"en","strings":{},"version":"1.0"}
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "%@ · %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ · %2$@"
+          }
+        }
+      }
+    },
+    "%@ %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ %2$@"
+          }
+        }
+      }
+    },
+    "%@ stored on this iPhone" : {
+
+    },
+    "%lld active" : {
+
+    },
+    "%lld alerts" : {
+
+    },
+    "%lld files · All dates" : {
+
+    },
+    "%lld files ready" : {
+
+    },
+    "%lld of %lld selected" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$lld of %2$lld selected"
+          }
+        }
+      }
+    },
+    "%lld records" : {
+
+    },
+    "%lld records were removed. Your device profile and preferences were kept." : {
+
+    },
+    "%lld sessions" : {
+
+    },
+    "%lld/%lld" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$lld/%2$lld"
+          }
+        }
+      }
+    },
+    "%lld%%" : {
+
+    },
+    "7 days" : {
+
+    },
+    "30 days" : {
+
+    },
+    "90 days" : {
+
+    },
+    "A monitoring session starts when you open the Monitor tab and ends when you leave it. Leaving the app ends it as interrupted." : {
+
+    },
+    "About" : {
+
+    },
+    "About background monitoring" : {
+
+    },
+    "About SystemScope" : {
+
+    },
+    "Activity" : {
+
+    },
+    "Activity events, alerts and monitoring session summaries that you can review, export or delete." : {
+
+    },
+    "Activity history" : {
+
+    },
+    "Activity records" : {
+
+    },
+    "Activity: a timeline of events, alerts and monitoring sessions, with search and filters." : {
+
+    },
+    "Adds the details below to support requests. Nothing else is shared." : {
+
+    },
+    "Advanced charts" : {
+
+    },
+    "Alert categories" : {
+
+    },
+    "Alert history" : {
+
+    },
+    "Alert Thresholds" : {
+
+    },
+    "Alerts" : {
+
+    },
+    "Alerts for battery, storage and thermal changes." : {
+
+    },
+    "Allow Notifications" : {
+
+    },
+    "Allowed" : {
+
+    },
+    "Animations are reduced automatically when Reduce Motion is on in iOS Settings." : {
+
+    },
+    "App version" : {
+
+    },
+    "Appearance" : {
+
+    },
+    "Appearance defaults restored" : {
+
+    },
+    "Application" : {
+
+    },
+    "Are you sure?" : {
+
+    },
+    "Ask when needed" : {
+
+    },
+    "Automatic refresh during active sessions" : {
+
+    },
+    "Back" : {
+
+    },
+    "Battery" : {
+
+    },
+    "Battery %lld%% · Storage %lld%% · Thermal %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Battery %1$lld%% · Storage %2$lld%% · Thermal %3$@"
+          }
+        }
+      }
+    },
+    "Battery alerts" : {
+
+    },
+    "Browse common questions and guides" : {
+
+    },
+    "Cancel" : {
+
+    },
+    "Chip, memory, display and cameras" : {
+
+    },
+    "Choose what deserves your attention." : {
+
+    },
+    "Choose what to delete. This can’t be undone." : {
+
+    },
+    "Clear %@" : {
+
+    },
+    "Clear %lld categories" : {
+
+    },
+    "Clear 1 category" : {
+
+    },
+    "Clear history" : {
+
+    },
+    "Clear History" : {
+
+    },
+    "Clear local data" : {
+
+    },
+    "Clearing history…" : {
+
+    },
+    "Close" : {
+
+    },
+    "Compact layout" : {
+
+    },
+    "Connection changes · Speed test completed" : {
+
+    },
+    "Contact" : {
+
+    },
+    "Contact Support" : {
+
+    },
+    "Copy diagnostic information" : {
+
+    },
+    "Couldn’t clear history" : {
+
+    },
+    "Couldn’t create the export. Nothing was saved. Try again." : {
+
+    },
+    "CPU" : {
+
+    },
+    "Critical" : {
+
+    },
+    "CSV or JSON files" : {
+
+    },
+    "Current plan" : {
+
+    },
+    "Custom alerts" : {
+
+    },
+    "Customize your monitoring experience." : {
+
+    },
+    "Dark" : {
+
+    },
+    "Data & History" : {
+
+    },
+    "Data & Privacy" : {
+
+    },
+    "Data actions" : {
+
+    },
+    "Data management" : {
+
+    },
+    "Decide when SystemScope should notify you." : {
+
+    },
+    "Detailed monitoring" : {
+
+    },
+    "Detailed monitoring, trends, custom alerts and reports" : {
+
+    },
+    "Device actions" : {
+
+    },
+    "Device details such as model, iOS version, memory, storage, battery, thermal state and network type, read from iOS while the app is open." : {
+
+    },
+    "Device information" : {
+
+    },
+    "Device information refreshed" : {
+
+    },
+    "Device model" : {
+
+    },
+    "Device name" : {
+
+    },
+    "Device name updated" : {
+
+    },
+    "Device profile reset" : {
+
+    },
+    "Device specifications" : {
+
+    },
+    "Device specifications are always a plain-text file. Exports are created on this iPhone; nothing is uploaded." : {
+
+    },
+    "Device: specifications, cameras, sensors and sensor tests." : {
+
+    },
+    "Diagnostic information" : {
+
+    },
+    "Diagnostic information copied" : {
+
+    },
+    "Discard changes" : {
+
+    },
+    "Display additional technical information where available." : {
+
+    },
+    "Display explanations alongside technical measurements." : {
+
+    },
+    "Display more information with reduced spacing." : {
+
+    },
+    "Display name" : {
+
+    },
+    "Display preferences" : {
+
+    },
+    "Display Preferences" : {
+
+    },
+    "Display previously recorded observations." : {
+
+    },
+    "Done" : {
+
+    },
+    "Elevated thermal state · Serious condition" : {
+
+    },
+    "Enter a name to continue." : {
+
+    },
+    "Everything stays on this iPhone. SystemScope has no account and doesn’t send your data anywhere. A speed test only contacts the test server you start it against." : {
+
+    },
+    "Explore Premium" : {
+
+    },
+    "Export data" : {
+
+    },
+    "Export Data" : {
+
+    },
+    "Export or delete your data anytime" : {
+
+    },
+    "Fair" : {
+
+    },
+    "Format" : {
+
+    },
+    "Free" : {
+
+    },
+    "Generating…" : {
+
+    },
+    "Get help" : {
+
+    },
+    "Get help with SystemScope" : {
+
+    },
+    "Give your iPhone a name that’s easy to recognize." : {
+
+    },
+    "GPU" : {
+
+    },
+    "Hardware and software details" : {
+
+    },
+    "Hardware information" : {
+
+    },
+    "Help articles and contact details will appear here. Until then, you can copy diagnostic information below." : {
+
+    },
+    "Help Centre" : {
+
+    },
+    "Hiding a resource only removes it from the Monitor overview. It doesn’t turn anything off on your iPhone." : {
+
+    },
+    "Historical trends" : {
+
+    },
+    "History cleared" : {
+
+    },
+    "History may use more storage over time." : {
+
+    },
+    "History retention" : {
+
+    },
+    "How monitoring works" : {
+
+    },
+    "Identified" : {
+
+    },
+    "Include with my message" : {
+
+    },
+    "iOS %@" : {
+
+    },
+    "iOS doesn’t let apps measure in the background, so there are no readings while SystemScope is closed. Gaps are shown as gaps, never filled in." : {
+
+    },
+    "iOS isn’t allowing SystemScope to send notifications. You can change this in Settings." : {
+
+    },
+    "iOS limits how often apps can measure in the background, so SystemScope refreshes when you open a page or during an active session." : {
+
+    },
+    "iOS version" : {
+
+    },
+    "Keep completed monitoring sessions." : {
+
+    },
+    "Keep editing" : {
+
+    },
+    "Keep history" : {
+
+    },
+    "Keep indefinitely" : {
+
+    },
+    "Keep recorded device events." : {
+
+    },
+    "Last updated %@" : {
+
+    },
+    "Light" : {
+
+    },
+    "Light is the SystemScope look for now. Dark and System arrive with the dark palette." : {
+
+    },
+    "Low available storage · Threshold reached" : {
+
+    },
+    "Low battery" : {
+
+    },
+    "Low battery · Battery status changes" : {
+
+    },
+    "Low storage" : {
+
+    },
+    "Made for a better understanding of your device." : {
+
+    },
+    "Make SystemScope feel right." : {
+
+    },
+    "Make SystemScope yours." : {
+
+    },
+    "Manage" : {
+
+    },
+    "Manage Device" : {
+
+    },
+    "Manage in Settings" : {
+
+    },
+    "Manage your SystemScope records." : {
+
+    },
+    "Manual" : {
+
+    },
+    "Memory" : {
+
+    },
+    "Minimize interface animations." : {
+
+    },
+    "Model" : {
+
+    },
+    "Monitoring" : {
+
+    },
+    "Monitoring alerts" : {
+
+    },
+    "Monitoring defaults restored" : {
+
+    },
+    "Monitoring preferences" : {
+
+    },
+    "Monitoring Preferences" : {
+
+    },
+    "Monitoring reports" : {
+
+    },
+    "Monitoring session reports" : {
+
+    },
+    "Monitoring session summaries" : {
+
+    },
+    "Monitoring sessions" : {
+
+    },
+    "Monitoring, notifications and appearance" : {
+
+    },
+    "More options" : {
+
+    },
+    "Motion" : {
+
+    },
+    "Motion & Fitness" : {
+
+    },
+    "My Device" : {
+
+    },
+    "Network" : {
+
+    },
+    "Network alerts" : {
+
+    },
+    "Never attached automatically. You can review everything before sending." : {
+
+    },
+    "No active subscription" : {
+
+    },
+    "No purchases to restore for this Apple Account." : {
+
+    },
+    "Not allowed" : {
+
+    },
+    "Not available yet" : {
+
+    },
+    "Not requested" : {
+
+    },
+    "Nothing was removed. Your history is unchanged." : {
+
+    },
+    "Notification defaults restored" : {
+
+    },
+    "Notification Preferences" : {
+
+    },
+    "Notification preview: %@. %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Notification preview: %1$@. %2$@"
+          }
+        }
+      }
+    },
+    "Notifications" : {
+
+    },
+    "Notifications are turned off for SystemScope" : {
+
+    },
+    "Notify early, as soon as your iPhone starts to warm." : {
+
+    },
+    "Notify me when a value crosses a threshold below." : {
+
+    },
+    "Notify me when available storage falls below this percentage." : {
+
+    },
+    "Notify me when battery reaches this level." : {
+
+    },
+    "now" : {
+
+    },
+    "Off" : {
+
+    },
+    "Oldest record" : {
+
+    },
+    "On" : {
+
+    },
+    "On open" : {
+
+    },
+    "Only when iOS takes strong action to cool down." : {
+
+    },
+    "Open Device Overview" : {
+
+    },
+    "Open iOS Notification Settings" : {
+
+    },
+    "Open Settings" : {
+
+    },
+    "Open Source Licenses" : {
+
+    },
+    "Opens in Numbers or a spreadsheet app" : {
+
+    },
+    "Partial" : {
+
+    },
+    "Payment is handled by Apple. Subscriptions renew automatically unless cancelled at least 24 hours before the renewal date." : {
+
+    },
+    "Permissions" : {
+
+    },
+    "Permissions are managed by iOS. SystemScope only asks when you use a feature that needs one." : {
+
+    },
+    "Plan details" : {
+
+    },
+    "Plans" : {
+
+    },
+    "Preferences reset" : {
+
+    },
+    "Premium includes" : {
+
+    },
+    "Preview" : {
+
+    },
+    "Privacy & Permissions" : {
+
+    },
+    "Privacy Policy" : {
+
+    },
+    "Problem report" : {
+
+    },
+    "Purchases aren’t open yet" : {
+
+    },
+    "Purchases restored." : {
+
+    },
+    "Receive important updates about your device." : {
+
+    },
+    "Recommended" : {
+
+    },
+    "Recommended. Performance may be reduced." : {
+
+    },
+    "Records older than this are removed automatically. Open alerts are kept until you resolve them." : {
+
+    },
+    "Records stay on this iPhone" : {
+
+    },
+    "Reduce animations" : {
+
+    },
+    "Refresh device information" : {
+
+    },
+    "Refresh on page entry" : {
+
+    },
+    "Refresh Preferences" : {
+
+    },
+    "Refresh supported metrics while you’re actively using Monitor." : {
+
+    },
+    "Removes history from this iPhone" : {
+
+    },
+    "Removing records from this iPhone." : {
+
+    },
+    "Rename your device" : {
+
+    },
+    "Replay onboarding" : {
+
+    },
+    "Report a Problem" : {
+
+    },
+    "Report an unexpected result or app issue" : {
+
+    },
+    "Reset local device profile" : {
+
+    },
+    "Reset local device profile?" : {
+
+    },
+    "Reset preferences" : {
+
+    },
+    "Reset Preferences" : {
+
+    },
+    "Reset preferences?" : {
+
+    },
+    "Reset Profile" : {
+
+    },
+    "Reset to recommended defaults" : {
+
+    },
+    "Restore appearance defaults" : {
+
+    },
+    "Restore defaults" : {
+
+    },
+    "Restore notification defaults" : {
+
+    },
+    "Restore Purchases" : {
+
+    },
+    "Restores the default device name" : {
+
+    },
+    "Restores the default name. History is kept." : {
+
+    },
+    "Save" : {
+
+    },
+    "Save changes" : {
+
+    },
+    "Save summaries of completed monitoring sessions." : {
+
+    },
+    "Save to apply your new thresholds, or go back to discard them." : {
+
+    },
+    "Save your threshold changes?" : {
+
+    },
+    "Sensors, connectivity and battery" : {
+
+    },
+    "Serious" : {
+
+    },
+    "Session completed · Collection errors" : {
+
+    },
+    "Session history" : {
+
+    },
+    "Sessions" : {
+
+    },
+    "Settings" : {
+
+    },
+    "Settings: thresholds, notifications, history controls and data export." : {
+
+    },
+    "Share Export" : {
+
+    },
+    "Show historical trends" : {
+
+    },
+    "Show metric descriptions" : {
+
+    },
+    "Show on Monitor" : {
+
+    },
+    "Show technical values" : {
+
+    },
+    "Shown on Home, in Activity and in exported reports. Only stored on this iPhone." : {
+
+    },
+    "Some values, such as device-wide CPU and GPU load, aren’t available to apps at all. SystemScope shows them as unavailable rather than guessing." : {
+
+    },
+    "Soon" : {
+
+    },
+    "Specifications" : {
+
+    },
+    "Status" : {
+
+    },
+    "Storage" : {
+
+    },
+    "Storage alerts" : {
+
+    },
+    "Storage running low" : {
+
+    },
+    "Structured, with a schema version" : {
+
+    },
+    "Subscription" : {
+
+    },
+    "Subscriptions will be sold through the App Store. Prices shown come from the store configuration." : {
+
+    },
+    "Support" : {
+
+    },
+    "Support channels open at launch" : {
+
+    },
+    "System" : {
+
+    },
+    "SystemScope %@ (%@)" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "SystemScope %1$@ (%2$@)"
+          }
+        }
+      }
+    },
+    "SystemScope doesn’t include third-party libraries. It is built only with Apple’s frameworks." : {
+
+    },
+    "SystemScope helps you understand your iPhone through clear device information, resource monitoring and useful insights." : {
+
+    },
+    "SystemScope is designed to collect only the information needed to provide your monitoring experience." : {
+
+    },
+    "SystemScope Premium" : {
+
+    },
+    "SystemScope reads your iPhone’s state through public iOS APIs while the app is open." : {
+
+    },
+    "SystemScope support" : {
+
+    },
+    "Take your device monitoring records with you." : {
+
+    },
+    "Terms of Use" : {
+
+    },
+    "The display name returns to “%@”. Your history and preferences are kept." : {
+
+    },
+    "The identity SystemScope uses for this iPhone." : {
+
+    },
+    "Theme" : {
+
+    },
+    "Thermal" : {
+
+    },
+    "Thermal alerts" : {
+
+    },
+    "Thermal conditions" : {
+
+    },
+    "Thermal states are defined by iOS and can’t be changed. You choose the lowest state that should notify you." : {
+
+    },
+    "This permanently removes %lld records from SystemScope:" : {
+
+    },
+    "Threshold alerts" : {
+
+    },
+    "Threshold alerts off" : {
+
+    },
+    "Thresholds back to recommended" : {
+
+    },
+    "Thresholds saved" : {
+
+    },
+    "today, %@" : {
+
+    },
+    "Try Again" : {
+
+    },
+    "Turning one off stops new records. Existing records stay until they expire or you clear them." : {
+
+    },
+    "Unavailable" : {
+
+    },
+    "Understand and control your data." : {
+
+    },
+    "Unknown iPhone model" : {
+
+    },
+    "Unlock the complete picture. Explore SystemScope Premium." : {
+
+    },
+    "Unsaved changes" : {
+
+    },
+    "Update available measurements whenever you open a monitoring page." : {
+
+    },
+    "Use Premium on another iPhone with the same Apple Account" : {
+
+    },
+    "Used only by the barometer sensor test in Device." : {
+
+    },
+    "Used only inside SystemScope." : {
+
+    },
+    "Version %@ · Build %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Version %1$@ · Build %2$@"
+          }
+        }
+      }
+    },
+    "We’re here to help." : {
+
+    },
+    "Website" : {
+
+    },
+    "What SystemScope collects" : {
+
+    },
+    "What SystemScope measures and shows" : {
+
+    },
+    "What to export" : {
+
+    },
+    "What’s New" : {
+
+    },
+    "You decide what’s kept and for how long" : {
+
+    },
+    "Your device profile, preferences and exported files are kept." : {
+
+    },
+    "Your information. Your control." : {
+
+    },
+    "Your iPhone has less available storage than your configured threshold." : {
+
+    },
+    "Your settings and the device name you choose." : {
+
+    },
+    "Your SystemScope plan." : {
+
+    },
+    "Your SystemScope preferences will return to their default settings. Your device profile and saved history will remain unchanged." : {
+
+    }
+  },
+  "version" : "1.0"
+}

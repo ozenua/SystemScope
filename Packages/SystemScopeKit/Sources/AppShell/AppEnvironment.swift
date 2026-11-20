@@ -8,6 +8,7 @@ import MonitorFeature
 import OnboardingFeature
 import SettingsFeature
 import SpeedTest
+import UIKit
 import UserNotifications
 
 /// The app's injected services (PRD §4.2). Features receive protocols from here so
@@ -99,7 +100,7 @@ public struct AppEnvironment {
     /// `-ActivityRoute <alerts|sessions|search>`, `-EmptyActivity` (with `-UseSampleDevice`),
     /// `-SpeedTestServer <url>`.
     public static func live() -> AppEnvironment {
-        let preferences = AppPreferences()
+        let preferences = AppPreferences(detectedDeviceName: UIDevice.current.name)
         #if DEBUG
         let arguments = ProcessInfo.processInfo.arguments
         if arguments.contains("-ResetOnboarding") {

@@ -1,1 +1,452 @@
-{"sourceLanguage":"en","strings":{},"version":"1.0"}
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "· Only for sensor tests that need it" : {
+
+    },
+    "· Only for the camera test in Device" : {
+
+    },
+    "· Only to show your Wi‑Fi network name" : {
+
+    },
+    "%@ free" : {
+
+    },
+    "%lld of %lld" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$lld of %2$lld"
+          }
+        }
+      }
+    },
+    "Activity" : {
+
+    },
+    "Advanced charts" : {
+
+    },
+    "Annual" : {
+
+    },
+    "ASKED ONLY WHEN YOU USE THEM" : {
+
+    },
+    "Back" : {
+
+    },
+    "Battery" : {
+
+    },
+    "Battery & thermal" : {
+
+    },
+    "Camera" : {
+
+    },
+    "Change spotted" : {
+
+    },
+    "Charging" : {
+
+    },
+    "Checking sensor availability" : {
+
+    },
+    "Complete" : {
+
+    },
+    "Connectivity & data" : {
+
+    },
+    "Continue" : {
+
+    },
+    "Continue with preview" : {
+
+    },
+    "CPU" : {
+
+    },
+    "CPU & memory" : {
+
+    },
+    "Critical" : {
+
+    },
+    "Custom alerts" : {
+
+    },
+    "Detailed monitoring" : {
+
+    },
+    "Detailed resources" : {
+
+    },
+    "Device & system" : {
+
+    },
+    "Device health" : {
+
+    },
+    "Device identification" : {
+
+    },
+    "Device model" : {
+
+    },
+    "Device monitoring alerts" : {
+
+    },
+    "Diagnostics" : {
+
+    },
+    "Display & cameras" : {
+
+    },
+    "Enable" : {
+
+    },
+    "Enabled" : {
+
+    },
+    "Everything in\none place" : {
+
+    },
+    "Explore Premium" : {
+
+    },
+    "Exportable reports" : {
+
+    },
+    "Fair" : {
+
+    },
+    "Free" : {
+
+    },
+    "Full dashboard" : {
+
+    },
+    "Fully charged" : {
+
+    },
+    "Future diagnostics" : {
+
+    },
+    "Get the complete picture." : {
+
+    },
+    "Getting your device ready." : {
+
+    },
+    "Good" : {
+
+    },
+    "Identify again" : {
+
+    },
+    "Identify my device" : {
+
+    },
+    "Identifying" : {
+
+    },
+    "In progress" : {
+
+    },
+    "in use of %@" : {
+
+    },
+    "iOS %@" : {
+
+    },
+    "iOS thermal state" : {
+
+    },
+    "iOS version" : {
+
+    },
+    "Level & charging" : {
+
+    },
+    "Location" : {
+
+    },
+    "Longer history" : {
+
+    },
+    "Maybe later" : {
+
+    },
+    "Memory" : {
+
+    },
+    "Memory & storage" : {
+
+    },
+    "Memory, storage, battery and network activity, keep track of the things that matter." : {
+
+    },
+    "Monitor performance, storage, battery and more from one place." : {
+
+    },
+    "Monthly" : {
+
+    },
+    "Motion & Fitness" : {
+
+    },
+    "My iPhone" : {
+
+    },
+    "Network" : {
+
+    },
+    "Network & connectivity" : {
+
+    },
+    "No previous Premium purchase was found for this Apple ID." : {
+
+    },
+    "Nominal" : {
+
+    },
+    "Normal" : {
+
+    },
+    "Not allowed" : {
+
+    },
+    "Not available yet" : {
+
+    },
+    "Not charging" : {
+
+    },
+    "Not reported by iOS" : {
+
+    },
+    "Not supported" : {
+
+    },
+    "Not verified" : {
+
+    },
+    "Nothing to restore" : {
+
+    },
+    "Notifications" : {
+
+    },
+    "Notifications let SystemScope tell you when a threshold is crossed. Other permissions are only asked for when you use a feature that needs them." : {
+
+    },
+    "of %@" : {
+
+    },
+    "Off. You can allow notifications in iPhone Settings." : {
+
+    },
+    "OK" : {
+
+    },
+    "Overview" : {
+
+    },
+    "Partial" : {
+
+    },
+    "Payment is charged to your Apple ID. Your subscription renews automatically unless cancelled at least 24 hours before the end of the current period. Cancel anytime in Settings." : {
+
+    },
+    "per month" : {
+
+    },
+    "per year" : {
+
+    },
+    "per year · %@/mo" : {
+
+    },
+    "Performance" : {
+
+    },
+    "Performance history" : {
+
+    },
+    "Permission needed" : {
+
+    },
+    "Physical memory" : {
+
+    },
+    "Plans aren't available right now." : {
+
+    },
+    "PREMIUM" : {
+
+    },
+    "Premium can't be purchased or restored in this build." : {
+
+    },
+    "Preparing scan" : {
+
+    },
+    "Privacy Policy" : {
+
+    },
+    "Processor" : {
+
+    },
+    "Purchases aren't available yet" : {
+
+    },
+    "Reading battery and thermal state" : {
+
+    },
+    "Reading device information" : {
+
+    },
+    "Reading display and cameras" : {
+
+    },
+    "Reading memory and storage" : {
+
+    },
+    "Reading network information" : {
+
+    },
+    "Reports" : {
+
+    },
+    "Restore" : {
+
+    },
+    "Restore Purchases" : {
+
+    },
+    "Sample" : {
+
+    },
+    "Sample SystemScope dashboard" : {
+
+    },
+    "Save %lld%%" : {
+
+    },
+    "Scan complete" : {
+
+    },
+    "Scanning everything iOS shares about your iPhone." : {
+
+    },
+    "See more. Understand more." : {
+
+    },
+    "Selected" : {
+
+    },
+    "Sensors" : {
+
+    },
+    "Serious" : {
+
+    },
+    "Setup complete" : {
+
+    },
+    "Skip" : {
+
+    },
+    "Some details aren't shared by iOS on this device. They're shown as unavailable." : {
+
+    },
+    "Spot changes, understand device conditions and get useful recommendations" : {
+
+    },
+    "Start exploring your iPhone with SystemScope." : {
+
+    },
+    "Start Premium" : {
+
+    },
+    "Stay informed, on your terms." : {
+
+    },
+    "Step %lld of %lld" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Step %1$lld of %2$lld"
+          }
+        }
+      }
+    },
+    "Storage" : {
+
+    },
+    "Storage trends" : {
+
+    },
+    "Storage use went up" : {
+
+    },
+    "SystemScope" : {
+
+    },
+    "SystemScope only asks when a feature needs it. You can change access anytime in Settings." : {
+
+    },
+    "Terms of Use" : {
+
+    },
+    "Thermal" : {
+
+    },
+    "Thermal state" : {
+
+    },
+    "This document hasn't been published yet." : {
+
+    },
+    "Unavailable" : {
+
+    },
+    "Understand your device. Stay ahead." : {
+
+    },
+    "Unknown iPhone model" : {
+
+    },
+    "Unlock detailed monitoring, historical trends, advanced charts and personalized device insights." : {
+
+    },
+    "Unlock everything SystemScope has to offer." : {
+
+    },
+    "Up next" : {
+
+    },
+    "Used" : {
+
+    },
+    "Used & available" : {
+
+    },
+    "Welcome to SystemScope" : {
+
+    },
+    "Your device is ready." : {
+
+    },
+    "Your iPhone" : {
+
+    }
+  },
+  "version" : "1.0"
+}

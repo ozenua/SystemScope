@@ -23,6 +23,11 @@ public struct NetworkSnapshot: Sendable, Equatable {
     public var isCellularAvailable: Bool?
     /// Wi-Fi network name. Only with Apple's entitlement and a qualifying access condition.
     public var networkName: String?
+    public var wifiBSSID: String?
+    public var wifiSecurity: String?
+    public var cellularTechnology: String?
+    /// Carrier names are not exposed by a current non-deprecated public API on iOS.
+    public var carrierName: String?
     /// Bytes since the interface counters last reset (usually the last restart).
     public var receivedBytes: UInt64?
     public var sentBytes: UInt64?
@@ -36,6 +41,10 @@ public struct NetworkSnapshot: Sendable, Equatable {
         supportsIPv6: Bool? = nil,
         isCellularAvailable: Bool? = nil,
         networkName: String? = nil,
+        wifiBSSID: String? = nil,
+        wifiSecurity: String? = nil,
+        cellularTechnology: String? = nil,
+        carrierName: String? = nil,
         receivedBytes: UInt64? = nil,
         sentBytes: UInt64? = nil
     ) {
@@ -47,6 +56,10 @@ public struct NetworkSnapshot: Sendable, Equatable {
         self.supportsIPv6 = supportsIPv6
         self.isCellularAvailable = isCellularAvailable
         self.networkName = networkName
+        self.wifiBSSID = wifiBSSID
+        self.wifiSecurity = wifiSecurity
+        self.cellularTechnology = cellularTechnology
+        self.carrierName = carrierName
         self.receivedBytes = receivedBytes
         self.sentBytes = sentBytes
     }
@@ -68,6 +81,9 @@ public struct SampleNetworkInspector: NetworkInspecting {
             supportsIPv6: true,
             isCellularAvailable: true,
             networkName: "MyHome_5G",
+            wifiBSSID: "02:00:00:00:00:00",
+            wifiSecurity: "Secured",
+            cellularTechnology: "5G",
             receivedBytes: 24_600_000,
             sentBytes: 4_800_000
         )

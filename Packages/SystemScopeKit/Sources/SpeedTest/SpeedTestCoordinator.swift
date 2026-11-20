@@ -128,9 +128,10 @@ public final class SpeedTestCoordinator: SpeedTestRunning, @unchecked Sendable {
         report(progress)
 
         // Idle latency and jitter, from the same ordered samples.
-        let roundTrips = try await LatencyTestService.measure(client: client, samples: profile.latencySamples)
-        progress.measurements.idleLatencyMs = SpeedTestMath.median(roundTrips)
-        progress.measurements.jitterMs = SpeedTestMath.jitter(roundTrips)
+        let latency = try await LatencyTestService.measure(client: client, samples: profile.latencySamples)
+        progress.measurements.idleLatencyMs = SpeedTestMath.median(latency.roundTrips)
+        progress.measurements.jitterMs = SpeedTestMath.jitter(latency.roundTrips)
+        progress.measurements.packetLossPercentage = latency.packetLossPercentage
 
         progress.phase = .download
         report(progress)

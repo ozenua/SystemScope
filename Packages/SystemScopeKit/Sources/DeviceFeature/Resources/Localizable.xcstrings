@@ -1,1 +1,1187 @@
-{"sourceLanguage":"en","strings":{},"version":"1.0"}
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    ", plus a LiDAR Scanner" : {
+
+    },
+    "%@ · %lld-core CPU" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ · %2$lld-core CPU"
+          }
+        }
+      }
+    },
+    "%@ · Metal 3" : {
+
+    },
+    "%@ diagonal" : {
+
+    },
+    "%@ GPU family" : {
+
+    },
+    "%@ of physical RAM" : {
+
+    },
+    "%@ optical" : {
+
+    },
+    "%@ pixels" : {
+
+    },
+    "%@ with %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ with %2$@"
+          }
+        }
+      }
+    },
+    "%lld" : {
+
+    },
+    "%lld available" : {
+
+    },
+    "%lld billion" : {
+
+    },
+    "%lld cameras" : {
+
+    },
+    "%lld cores" : {
+
+    },
+    "%lld GB tier" : {
+
+    },
+    "%lld Hz" : {
+
+    },
+    "%lld Hz ProMotion" : {
+
+    },
+    "%lld MP main camera system" : {
+
+    },
+    "%lld need permission" : {
+
+    },
+    "%lld nm process" : {
+
+    },
+    "%lld of %lld characters" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$lld of %2$lld characters"
+          }
+        }
+      }
+    },
+    "%lld performance + %lld efficiency" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$lld performance + %2$lld efficiency"
+          }
+        }
+      }
+    },
+    "%lld rear and %lld front cameras" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$lld rear and %2$lld front cameras"
+          }
+        }
+      }
+    },
+    "%lld sensors" : {
+
+    },
+    "%lld-core" : {
+
+    },
+    "%lld-core CPU" : {
+
+    },
+    "%lld-core CPU reported by iOS." : {
+
+    },
+    "%lld-core GPU" : {
+
+    },
+    "%lld-core Neural Engine" : {
+
+    },
+    "%lld/%lld" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$lld/%2$lld"
+          }
+        }
+      }
+    },
+    "64-bit ARM (%@)" : {
+
+    },
+    "Acceleration · 3 axes" : {
+
+    },
+    "Accelerometer" : {
+
+    },
+    "Active cores" : {
+
+    },
+    "Adaptive %lld–%lld Hz" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Adaptive %1$lld–%2$lld Hz"
+          }
+        }
+      }
+    },
+    "Adaptive up to %lld Hz" : {
+
+    },
+    "Additional information" : {
+
+    },
+    "Adjusts screen brightness" : {
+
+    },
+    "Air pressure and altitude changes" : {
+
+    },
+    "Always-On" : {
+
+    },
+    "Ambient light" : {
+
+    },
+    "Aperture" : {
+
+    },
+    "Appearance" : {
+
+    },
+    "Architecture" : {
+
+    },
+    "Architecture and core configuration" : {
+
+    },
+    "Available" : {
+
+    },
+    "Back" : {
+
+    },
+    "Barometer" : {
+
+    },
+    "Battery" : {
+
+    },
+    "Battery hardware and charging capabilities" : {
+
+    },
+    "Battery health isn’t available here" : {
+
+    },
+    "Battery level" : {
+
+    },
+    "Battery level and charging state reported by iOS." : {
+
+    },
+    "Battery specifications" : {
+
+    },
+    "Battery state" : {
+
+    },
+    "Biometric match" : {
+
+    },
+    "Bluetooth" : {
+
+    },
+    "Bluetooth %@" : {
+
+    },
+    "Brightness" : {
+
+    },
+    "Build" : {
+
+    },
+    "Build number" : {
+
+    },
+    "Built-in display" : {
+
+    },
+    "Cache" : {
+
+    },
+    "Camera" : {
+
+    },
+    "Camera capabilities" : {
+
+    },
+    "Camera system" : {
+
+    },
+    "Camera system and supported features" : {
+
+    },
+    "Cameras" : {
+
+    },
+    "Cancel" : {
+
+    },
+    "Capabilities" : {
+
+    },
+    "Capacity as iOS reports it for this iPhone's volume, rounded to the advertised size." : {
+
+    },
+    "Catalogue match" : {
+
+    },
+    "Catalogue version %@" : {
+
+    },
+    "Cellular" : {
+
+    },
+    "Cellular available" : {
+
+    },
+    "Cellular in use" : {
+
+    },
+    "Change brightness and appearance in Settings › Display & Brightness." : {
+
+    },
+    "Charging" : {
+
+    },
+    "Charging and battery information" : {
+
+    },
+    "Charging port" : {
+
+    },
+    "Charging sessions and battery level history." : {
+
+    },
+    "Check for updates in Settings" : {
+
+    },
+    "Check your connection" : {
+
+    },
+    "Chip" : {
+
+    },
+    "Chip Details" : {
+
+    },
+    "Chip details aren't in the catalogue yet" : {
+
+    },
+    "Classification" : {
+
+    },
+    "Clear" : {
+
+    },
+    "Close" : {
+
+    },
+    "Collapsed" : {
+
+    },
+    "Compass heading" : {
+
+    },
+    "Connected" : {
+
+    },
+    "Connection status couldn't be read" : {
+
+    },
+    "Connection status, speed tests and SystemScope’s data usage." : {
+
+    },
+    "Connectivity" : {
+
+    },
+    "Copied" : {
+
+    },
+    "Copied to clipboard" : {
+
+    },
+    "Copies the value" : {
+
+    },
+    "Copy" : {
+
+    },
+    "Copy all specifications" : {
+
+    },
+    "Copy build" : {
+
+    },
+    "Copy camera details" : {
+
+    },
+    "Copy display details" : {
+
+    },
+    "Copy graphics details" : {
+
+    },
+    "Copy memory" : {
+
+    },
+    "Copy model identifier %@" : {
+
+    },
+    "Copy processor" : {
+
+    },
+    "Copy specifications" : {
+
+    },
+    "Copy version" : {
+
+    },
+    "Core configuration" : {
+
+    },
+    "Couldn’t refresh" : {
+
+    },
+    "CPU architecture" : {
+
+    },
+    "CPU Architecture" : {
+
+    },
+    "CPU cores" : {
+
+    },
+    "Current configuration" : {
+
+    },
+    "Dark" : {
+
+    },
+    "Depth" : {
+
+    },
+    "Depth sensing for AR and photos" : {
+
+    },
+    "Detects when something is close to the screen, such as your ear during a call." : {
+
+    },
+    "Device" : {
+
+    },
+    "Device actions" : {
+
+    },
+    "device catalogue %@, not yet verified" : {
+
+    },
+    "Device compatibility" : {
+
+    },
+    "Device family" : {
+
+    },
+    "Device information" : {
+
+    },
+    "Device name" : {
+
+    },
+    "Device name updated" : {
+
+    },
+    "Device record" : {
+
+    },
+    "Digital zoom" : {
+
+    },
+    "Display" : {
+
+    },
+    "Display capabilities" : {
+
+    },
+    "Display P3" : {
+
+    },
+    "Display scale" : {
+
+    },
+    "Each block represents 1 GB" : {
+
+    },
+    "Efficiency cores" : {
+
+    },
+    "Enter a name to continue." : {
+
+    },
+    "Expanded" : {
+
+    },
+    "Explore CPU Monitor" : {
+
+    },
+    "Explore device" : {
+
+    },
+    "Explore the sensors and detection technologies built into your iPhone." : {
+
+    },
+    "Face ID" : {
+
+    },
+    "Family" : {
+
+    },
+    "Fast charging" : {
+
+    },
+    "FileManager volume capacity, read on device" : {
+
+    },
+    "Finds your position from satellite signals. SystemScope only reads whether location access is allowed." : {
+
+    },
+    "First registered" : {
+
+    },
+    "Frame rates" : {
+
+    },
+    "Framework" : {
+
+    },
+    "Front" : {
+
+    },
+    "Front camera" : {
+
+    },
+    "Full" : {
+
+    },
+    "GB" : {
+
+    },
+    "General" : {
+
+    },
+    "Generation, family and graphics" : {
+
+    },
+    "Give your iPhone a name that’s easy to recognize." : {
+
+    },
+    "GPS / GNSS" : {
+
+    },
+    "GPU" : {
+
+    },
+    "GPU and rendering capabilities" : {
+
+    },
+    "GPU architecture" : {
+
+    },
+    "GPU families" : {
+
+    },
+    "Graphics" : {
+
+    },
+    "Graphics specifications" : {
+
+    },
+    "Gyroscope" : {
+
+    },
+    "Hardware generation" : {
+
+    },
+    "Hardware ray tracing" : {
+
+    },
+    "Hardware sensors in your iPhone" : {
+
+    },
+    "HDR" : {
+
+    },
+    "HDR video" : {
+
+    },
+    "Identification" : {
+
+    },
+    "Identified" : {
+
+    },
+    "Identifier %@. Live values such as memory, storage and refresh rate still work; other specifications show as unavailable until the next update." : {
+
+    },
+    "Identity and configuration of your iPhone" : {
+
+    },
+    "Installed software on your iPhone" : {
+
+    },
+    "Installed version" : {
+
+    },
+    "Instruction capabilities" : {
+
+    },
+    "iOS %@" : {
+
+    },
+    "iOS %@ (%@)" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "iOS %1$@ (%2$@)"
+          }
+        }
+      }
+    },
+    "iOS didn't report any cameras on this device." : {
+
+    },
+    "iOS shows maximum capacity and cycle count in Settings › Battery, not to apps." : {
+
+    },
+    "iOS version" : {
+
+    },
+    "L1 cache" : {
+
+    },
+    "L1 data cache" : {
+
+    },
+    "L1 instruction cache" : {
+
+    },
+    "L2 cache" : {
+
+    },
+    "L3 cache" : {
+
+    },
+    "Landscape" : {
+
+    },
+    "Language" : {
+
+    },
+    "Last reading" : {
+
+    },
+    "Last updated" : {
+
+    },
+    "LiDAR Scanner" : {
+
+    },
+    "Light" : {
+
+    },
+    "Light level" : {
+
+    },
+    "Live app activity, session history and processor details." : {
+
+    },
+    "Loading device information" : {
+
+    },
+    "Locale, region and time zone" : {
+
+    },
+    "Location" : {
+
+    },
+    "Low Data Mode" : {
+
+    },
+    "Low Power Mode" : {
+
+    },
+    "Magnetic field · 3 axes" : {
+
+    },
+    "Magnetometer" : {
+
+    },
+    "Main" : {
+
+    },
+    "Max threadgroup memory" : {
+
+    },
+    "Max threads per group" : {
+
+    },
+    "Maximum refresh rate" : {
+
+    },
+    "Measures" : {
+
+    },
+    "Measures acceleration along three axes, used for orientation, step counting and motion." : {
+
+    },
+    "Measures air pressure to estimate changes in altitude, like climbing stairs or a hill." : {
+
+    },
+    "Measures depth with light pulses for AR, night portraits and faster autofocus." : {
+
+    },
+    "Measures how fast your iPhone rotates, used for games, AR and image stabilisation." : {
+
+    },
+    "Measures surrounding light so iOS can adjust brightness and True Tone. iOS doesn't let apps read it." : {
+
+    },
+    "Measures the magnetic field around your iPhone, used for the compass and heading." : {
+
+    },
+    "Memory" : {
+
+    },
+    "Memory architecture" : {
+
+    },
+    "Memory information" : {
+
+    },
+    "Memory type" : {
+
+    },
+    "Metal feature set" : {
+
+    },
+    "Metered" : {
+
+    },
+    "Model" : {
+
+    },
+    "Model identifier" : {
+
+    },
+    "Monitor memory usage" : {
+
+    },
+    "More options" : {
+
+    },
+    "Motion & Fitness" : {
+
+    },
+    "Motion and orientation" : {
+
+    },
+    "Motion, location and biometric sensors" : {
+
+    },
+    "Name, model and identifiers" : {
+
+    },
+    "Near or far" : {
+
+    },
+    "Neural Engine" : {
+
+    },
+    "Neural Engine and machine learning" : {
+
+    },
+    "Neural Processing" : {
+
+    },
+    "NFC" : {
+
+    },
+    "No active connection" : {
+
+    },
+    "No cameras reported" : {
+
+    },
+    "No device details could be read." : {
+
+    },
+    "No readings" : {
+
+    },
+    "No readings received" : {
+
+    },
+    "No test available" : {
+
+    },
+    "None public" : {
+
+    },
+    "Not applicable" : {
+
+    },
+    "Not available" : {
+
+    },
+    "Not charging" : {
+
+    },
+    "Not connected" : {
+
+    },
+    "Not detected" : {
+
+    },
+    "Not in catalogue" : {
+
+    },
+    "Not in use" : {
+
+    },
+    "Not reported" : {
+
+    },
+    "Not requested" : {
+
+    },
+    "Not required" : {
+
+    },
+    "Not supported" : {
+
+    },
+    "Not tested" : {
+
+    },
+    "Off" : {
+
+    },
+    "On" : {
+
+    },
+    "Open Battery Monitor" : {
+
+    },
+    "Open GPU Monitor" : {
+
+    },
+    "Open Memory Monitor" : {
+
+    },
+    "Open Network Monitor" : {
+
+    },
+    "Operating system" : {
+
+    },
+    "Operating System" : {
+
+    },
+    "Optical zoom" : {
+
+    },
+    "Orientation" : {
+
+    },
+    "Partial" : {
+
+    },
+    "Passed · %lld readings" : {
+
+    },
+    "Performance cores" : {
+
+    },
+    "Permission" : {
+
+    },
+    "Permission denied" : {
+
+    },
+    "Permission required" : {
+
+    },
+    "Physical device memory" : {
+
+    },
+    "Physical memory" : {
+
+    },
+    "Physical memory built into your iPhone" : {
+
+    },
+    "Pixel density" : {
+
+    },
+    "Portrait" : {
+
+    },
+    "Position" : {
+
+    },
+    "Pressure · relative altitude" : {
+
+    },
+    "Pro camera system" : {
+
+    },
+    "Process" : {
+
+    },
+    "Processor" : {
+
+    },
+    "Processor information" : {
+
+    },
+    "Processor instruction and data cache" : {
+
+    },
+    "ProMotion" : {
+
+    },
+    "Proximity sensor" : {
+
+    },
+    "Quick specs" : {
+
+    },
+    "Ray tracing" : {
+
+    },
+    "Rear cameras" : {
+
+    },
+    "Recognises your face with the TrueDepth camera. iOS reports whether it is present; SystemScope never asks you to authenticate." : {
+
+    },
+    "Recommended GPU working set" : {
+
+    },
+    "Recommended working set" : {
+
+    },
+    "Recorded" : {
+
+    },
+    "Recorded %@" : {
+
+    },
+    "Recording" : {
+
+    },
+    "Refresh information" : {
+
+    },
+    "Refresh rate" : {
+
+    },
+    "Refreshing device information…" : {
+
+    },
+    "Region" : {
+
+    },
+    "Related information" : {
+
+    },
+    "Released" : {
+
+    },
+    "Rename device" : {
+
+    },
+    "Rename your device" : {
+
+    },
+    "Resolution" : {
+
+    },
+    "Retry" : {
+
+    },
+    "Rotation rate" : {
+
+    },
+    "Rotation rate · 3 axes" : {
+
+    },
+    "Run Again" : {
+
+    },
+    "Run Test" : {
+
+    },
+    "Running on %@" : {
+
+    },
+    "Satellite" : {
+
+    },
+    "Satellite positioning" : {
+
+    },
+    "Save changes" : {
+
+    },
+    "Screen dimensions" : {
+
+    },
+    "Screen size" : {
+
+    },
+    "Screen technology and capabilities" : {
+
+    },
+    "See graphics performance reports" : {
+
+    },
+    "See how much memory SystemScope uses during active monitoring sessions." : {
+
+    },
+    "See how SystemScope uses the CPU" : {
+
+    },
+    "Sensor information couldn't be read." : {
+
+    },
+    "Sensor inventory" : {
+
+    },
+    "Sensors" : {
+
+    },
+    "Showing details from %@." : {
+
+    },
+    "Showing the first 16 GB" : {
+
+    },
+    "Shows chip details" : {
+
+    },
+    "Software information" : {
+
+    },
+    "Source: %@" : {
+
+    },
+    "Specifications copied" : {
+
+    },
+    "sRGB" : {
+
+    },
+    "Status shows what SystemScope can verify. A sensor can be built in even if iOS doesn’t let apps read it directly." : {
+
+    },
+    "Storage" : {
+
+    },
+    "Supported" : {
+
+    },
+    "System architecture" : {
+
+    },
+    "System configuration" : {
+
+    },
+    "SystemScope can’t confirm whether a newer iOS version is available. Go to Settings › General › Software Update." : {
+
+    },
+    "SystemScope can't test this sensor. Its status shows what iOS reports; it doesn't mean the sensor is faulty." : {
+
+    },
+    "SystemScope lists cameras without asking for camera access. Video formats such as ProRes are set in Settings › Camera." : {
+
+    },
+    "SystemScope only shows connection details iOS shares with apps. Some features depend on your region and carrier." : {
+
+    },
+    "SystemScope’s own GPU time and Metal capability details." : {
+
+    },
+    "Takes about 5 seconds. iOS may ask for Motion & Fitness access first." : {
+
+    },
+    "Takes about 5 seconds. Keep your iPhone still." : {
+
+    },
+    "Telephoto" : {
+
+    },
+    "Test passed" : {
+
+    },
+    "Test status" : {
+
+    },
+    "Testing" : {
+
+    },
+    "Testing…" : {
+
+    },
+    "The system on a chip that runs your iPhone." : {
+
+    },
+    "This iPhone isn’t in our catalogue yet" : {
+
+    },
+    "This is the memory built into your iPhone. iOS doesn’t let apps see how much memory other apps are using." : {
+
+    },
+    "Time zone" : {
+
+    },
+    "Today, %@" : {
+
+    },
+    "Total cores" : {
+
+    },
+    "Total physical memory" : {
+
+    },
+    "Transistors" : {
+
+    },
+    "TrueDepth" : {
+
+    },
+    "TrueDepth facial recognition" : {
+
+    },
+    "Turns the screen off during calls" : {
+
+    },
+    "Ultra Wide" : {
+
+    },
+    "Ultra Wideband" : {
+
+    },
+    "Unavailable" : {
+
+    },
+    "Unified memory" : {
+
+    },
+    "Unknown" : {
+
+    },
+    "Unknown iPhone model" : {
+
+    },
+    "Up to %@" : {
+
+    },
+    "Up to %@ nits" : {
+
+    },
+    "Up to %lld fps" : {
+
+    },
+    "Up to %lld Hz" : {
+
+    },
+    "Updates" : {
+
+    },
+    "Used only inside SystemScope." : {
+
+    },
+    "Volume size" : {
+
+    },
+    "Watch your battery over time" : {
+
+    },
+    "Wi-Fi" : {
+
+    },
+    "Wi-Fi in use" : {
+
+    },
+    "Wi-Fi, cellular and Bluetooth" : {
+
+    },
+    "Wide color" : {
+
+    },
+    "Wired" : {
+
+    },
+    "Wired connection in use" : {
+
+    },
+    "Wireless and communication capabilities" : {
+
+    },
+    "Wireless charging" : {
+
+    },
+    "Your device can sense more than you think." : {
+
+    },
+    "Your device information" : {
+
+    },
+    "Your iPhone’s chip and CPU configuration" : {
+
+    }
+  },
+  "version" : "1.0"
+}

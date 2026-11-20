@@ -22,7 +22,7 @@ public final class AppPreferences {
         didSet { defaults.set(hasCompletedOnboarding, forKey: Key.hasCompletedOnboarding) }
     }
 
-    /// PRD §2.3: a local display name, never the iOS Settings device name.
+    /// PRD §2.3: a local display name, initially seeded from the iOS device name.
     public private(set) var deviceDisplayName: String
 
     /// Settings from the Settings tab. Saved whenever they change.
@@ -33,8 +33,19 @@ public final class AppPreferences {
     /// When SystemScope first recorded this device: its first launch. Stored locally only.
     public let firstRegistered: Date
 
-    public init(defaults: UserDefaults = .standard, now: Date = .now) {
+    private let detectedDeviceDisplayName: String
+
+    public init(
+        defaults: UserDefaults = .standard,
+        now: Date = .now,
+        detectedDeviceName: String? = nil
+    ) {
         self.defaults = defaults
+        let detectedName = detectedDeviceName?
+            .trimmingCharacters(in: .whitespacesAndNewlines)
+        detectedDeviceDisplayName = detectedName.flatMap { name in
+            name.isEmpty ? nil : String(name.prefix(Self.deviceDisplayNameLimit))
+        } ?? Self.defaultDeviceDisplayName
         if let stored = defaults.object(forKey: Key.firstRegistered) as? Date {
             firstRegistered = stored
         } else {
@@ -44,7 +55,7 @@ public final class AppPreferences {
         settings = defaults.data(forKey: Key.settings)
             .flatMap { try? JSONDecoder().decode(UserSettings.self, from: $0) } ?? UserSettings()
         hasCompletedOnboarding = defaults.bool(forKey: Key.hasCompletedOnboarding)
-        deviceDisplayName = defaults.string(forKey: Key.deviceDisplayName) ?? Self.defaultDeviceDisplayName
+        deviceDisplayName = defaults.string(forKey: Key.deviceDisplayName) ?? detectedDeviceDisplayName
     }
 
     /// Returns false (and changes nothing) when the name is empty after trimming.
@@ -68,9 +79,9 @@ public final class AppPreferences {
         settings = UserSettings()
     }
 
-    /// Restores the default display name (SET-02 "Reset local device profile").
+    /// Restores the detected iPhone name (SET-02 "Reset local device profile").
     public func resetDeviceProfile() {
-        deviceDisplayName = Self.defaultDeviceDisplayName
+        deviceDisplayName = detectedDeviceDisplayName
         defaults.removeObject(forKey: Key.deviceDisplayName)
     }
 }

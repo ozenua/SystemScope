@@ -1,1 +1,443 @@
-{"sourceLanguage":"en","strings":{},"version":"1.0"}
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "%@ / %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ / %2$@"
+          }
+        }
+      }
+    },
+    "%@ Mbps" : {
+
+    },
+    "%@ ms" : {
+
+    },
+    "%@ used, %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ used, %2$@"
+          }
+        }
+      }
+    },
+    "1 Year" : {
+
+    },
+    "6 Months" : {
+
+    },
+    "7 Days" : {
+
+    },
+    "30 Days" : {
+
+    },
+    "32-bit float filtering" : {
+
+    },
+    "Alerts" : {
+
+    },
+    "Apple GPU family %lld" : {
+
+    },
+    "Architecture" : {
+
+    },
+    "Attention" : {
+
+    },
+    "Available" : {
+
+    },
+    "Back" : {
+
+    },
+    "Battery" : {
+
+    },
+    "Battery level not reported by iOS" : {
+
+    },
+    "BC texture compression" : {
+
+    },
+    "Cancel test" : {
+
+    },
+    "Capabilities" : {
+
+    },
+    "Cellular" : {
+
+    },
+    "Charging" : {
+
+    },
+    "Check network connection and data usage" : {
+
+    },
+    "Checking" : {
+
+    },
+    "Checking download speed" : {
+
+    },
+    "Checking upload speed" : {
+
+    },
+    "Chosen when the test starts" : {
+
+    },
+    "Close" : {
+
+    },
+    "Connect to Wi-Fi or cellular and try again." : {
+
+    },
+    "Connected to" : {
+
+    },
+    "Connection" : {
+
+    },
+    "cores" : {
+
+    },
+    "Couldn't get a reliable reading" : {
+
+    },
+    "Couldn't reach the test server" : {
+
+    },
+    "CPU" : {
+
+    },
+    "Critical" : {
+
+    },
+    "Data Usage" : {
+
+    },
+    "Data used" : {
+
+    },
+    "Delete result" : {
+
+    },
+    "Device specification" : {
+
+    },
+    "Done" : {
+
+    },
+    "Download" : {
+
+    },
+    "Download latency" : {
+
+    },
+    "Downloaded" : {
+
+    },
+    "Ethernet" : {
+
+    },
+    "Fair" : {
+
+    },
+    "Finishing up" : {
+
+    },
+    "Fully charged" : {
+
+    },
+    "Good" : {
+
+    },
+    "GPU" : {
+
+    },
+    "GPU families" : {
+
+    },
+    "GPU Hardware" : {
+
+    },
+    "GPU Utilisation" : {
+
+    },
+    "Graphics hardware and activity" : {
+
+    },
+    "Healthy" : {
+
+    },
+    "Idle latency" : {
+
+    },
+    "In use not reported" : {
+
+    },
+    "Inactive" : {
+
+    },
+    "Internet connected" : {
+
+    },
+    "Internet speed test" : {
+
+    },
+    "iOS doesn't share device-wide CPU or GPU activity with apps." : {
+
+    },
+    "iOS doesn't share device-wide GPU activity with apps." : {
+
+    },
+    "It was stopped before finishing, so there are no results." : {
+
+    },
+    "Jitter" : {
+
+    },
+    "Last command buffer" : {
+
+    },
+    "Latency" : {
+
+    },
+    "Latency is the HTTP round trip to the test server, not an ICMP ping." : {
+
+    },
+    "Limited" : {
+
+    },
+    "Low charge" : {
+
+    },
+    "Low Data Mode is on, so only the quick test is available." : {
+
+    },
+    "Max threadgroup memory" : {
+
+    },
+    "Max threads per group" : {
+
+    },
+    "Mbps" : {
+
+    },
+    "Measuring latency" : {
+
+    },
+    "Memory" : {
+
+    },
+    "Metal" : {
+
+    },
+    "Metal 3" : {
+
+    },
+    "Network" : {
+
+    },
+    "Network health" : {
+
+    },
+    "No internet connection" : {
+
+    },
+    "No test server is set up for this build, so nothing can be measured." : {
+
+    },
+    "None reported" : {
+
+    },
+    "Normal" : {
+
+    },
+    "Normal operating temperature" : {
+
+    },
+    "Not available" : {
+
+    },
+    "Not charging" : {
+
+    },
+    "Not connected" : {
+
+    },
+    "Not enough history yet" : {
+
+    },
+    "Not measured" : {
+
+    },
+    "Not reported by iOS" : {
+
+    },
+    "Not supported on this device" : {
+
+    },
+    "Not tested" : {
+
+    },
+    "Nothing was measured. Check your connection and try again." : {
+
+    },
+    "Offline" : {
+
+    },
+    "Open data usage" : {
+
+    },
+    "Open GPU details" : {
+
+    },
+    "Other network" : {
+
+    },
+    "Packet loss" : {
+
+    },
+    "Partial" : {
+
+    },
+    "Pending" : {
+
+    },
+    "Performance" : {
+
+    },
+    "Performance counter sets" : {
+
+    },
+    "Preparing test" : {
+
+    },
+    "Previous tests" : {
+
+    },
+    "Quick" : {
+
+    },
+    "Ray tracing" : {
+
+    },
+    "Recommended working set" : {
+
+    },
+    "Run Speed Test" : {
+
+    },
+    "Running hot. Performance may be reduced" : {
+
+    },
+    "Serious" : {
+
+    },
+    "Since last restart" : {
+
+    },
+    "Slightly warmer than usual" : {
+
+    },
+    "Speed test complete" : {
+
+    },
+    "Speed test isn't available yet" : {
+
+    },
+    "Standard" : {
+
+    },
+    "Start Test" : {
+
+    },
+    "Storage" : {
+
+    },
+    "SystemScope GPU Activity" : {
+
+    },
+    "Temperature" : {
+
+    },
+    "Test again" : {
+
+    },
+    "Test server" : {
+
+    },
+    "The network switched during the test, so the results were discarded." : {
+
+    },
+    "The test took too long" : {
+
+    },
+    "This app" : {
+
+    },
+    "This connection may be metered." : {
+
+    },
+    "This iPhone" : {
+
+    },
+    "Today" : {
+
+    },
+    "Too few valid samples were collected, so no result is shown." : {
+
+    },
+    "Try again" : {
+
+    },
+    "Unavailable" : {
+
+    },
+    "Unified memory" : {
+
+    },
+    "Unknown iPhone model" : {
+
+    },
+    "Upload" : {
+
+    },
+    "Upload latency" : {
+
+    },
+    "Uploaded" : {
+
+    },
+    "Usage over time appears once SystemScope has recorded enough readings while open." : {
+
+    },
+    "Uses up to %@ of data." : {
+
+    },
+    "Very hot. Let your iPhone cool down" : {
+
+    },
+    "Wi-Fi" : {
+
+    },
+    "You're on cellular, so this test uses mobile data." : {
+
+    },
+    "Your connection changed" : {
+
+    }
+  },
+  "version" : "1.0"
+}

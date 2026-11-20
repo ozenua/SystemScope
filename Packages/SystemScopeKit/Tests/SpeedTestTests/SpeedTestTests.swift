@@ -128,14 +128,22 @@ struct SpeedTestCoordinatorTests {
         #expect((measured.uploadMbps ?? 0) > 0)
         #expect(measured.idleLatencyMs != nil)
         #expect(measured.jitterMs != nil)
-        // No packet-loss infrastructure exists, so the figure is unavailable, not 0.
-        #expect(measured.packetLossPercentage == nil)
+        #expect(measured.packetLossPercentage == 0)
         #expect(result.connection == .wifi)
         #expect(result.serverHost == "test.example")
         #expect(result.serverRegion == "test-region")
         #expect(result.transferredBytes > 0)
         #expect(result.transferredBytes <= Int64(SpeedTestProfile.quick.dataBudgetBytes))
         #expect(await history.all() == [result])
+    }
+
+    @Test func packetLossCountsFailedLatencyProbes() async throws {
+        let result = try await LatencyTestService.measure(
+            client: FailingPingServer(),
+            samples: 5
+        )
+        #expect(result.roundTrips.count == 4)
+        #expect(result.packetLossPercentage == 20)
     }
 
     @Test func progressReportsPhasesInOrder() async {
@@ -174,6 +182,42 @@ struct SpeedTestCoordinatorTests {
         var events: [SpeedTestEvent] = []
         for await event in coordinator.run(profile: .quick, wifiSSID: nil) { events.append(event) }
         #expect(events == [.failed(.notConfigured)])
+    }
+}
+
+private struct FailingPingServer: SpeedTestServerClient {
+    var host = "test.example"
+    let state = PingState()
+
+    func fetchConfig() async throws -> SpeedTestServerConfig {
+        SpeedTestServerConfig(serverRegion: "test-region")
+    }
+
+    func ping() async throws -> Double {
+        try await Task.sleep(for: .milliseconds(1))
+        if state.next() == 2 {
+            throw URLError(.networkConnectionLost)
+        }
+        return 20
+    }
+
+    func download(bytes: Int, onBytes: @escaping @Sendable (Int) -> Void) async throws -> Int { bytes }
+
+    func upload(bytes: Int, onBytesSent: @escaping @Sendable (Int) -> Void) async throws -> UploadConfirmation {
+        onBytesSent(bytes)
+        return UploadConfirmation(bytesReceived: bytes)
+    }
+}
+
+private final class PingState: @unchecked Sendable {
+    private let lock = NSLock()
+    private var count = 0
+
+    func next() -> Int {
+        lock.withLock {
+            count += 1
+            return count
+        }
     }
 }
 

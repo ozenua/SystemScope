@@ -32,6 +32,32 @@ struct AppPreferencesTests {
         #expect(preferences.deviceDisplayName.count == 40)
     }
 
+    @Test func detectedDeviceNameSeedsTheLocalDisplayName() {
+        let preferences = AppPreferences(
+            defaults: makeDefaults(),
+            detectedDeviceName: "Ozen's iPhone"
+        )
+        #expect(preferences.deviceDisplayName == "Ozen's iPhone")
+    }
+
+    @Test func explicitNameSurvivesDetectedDeviceName() {
+        let defaults = makeDefaults()
+        let first = AppPreferences(defaults: defaults, detectedDeviceName: "Ozen's iPhone")
+        #expect(first.setDeviceDisplayName("Work phone"))
+        let second = AppPreferences(defaults: defaults, detectedDeviceName: "Ozen's iPhone")
+        #expect(second.deviceDisplayName == "Work phone")
+    }
+
+    @Test func resetRestoresDetectedDeviceName() {
+        let preferences = AppPreferences(
+            defaults: makeDefaults(),
+            detectedDeviceName: "Ozen's iPhone"
+        )
+        #expect(preferences.setDeviceDisplayName("Work phone"))
+        preferences.resetDeviceProfile()
+        #expect(preferences.deviceDisplayName == "Ozen's iPhone")
+    }
+
     @Test func emptyDisplayNameIsRejected() {
         let preferences = AppPreferences(defaults: makeDefaults())
         #expect(preferences.setDeviceDisplayName("   ") == false)

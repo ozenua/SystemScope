@@ -54,6 +54,15 @@ struct GPUTests {
         #expect(GPUPerformanceMonitor.executionTimeMs(start: 1, end: 1.25) == 250)
     }
 
+    struct WiFiInformationTests {
+        @Test func personalTeamBuildDoesNotReadWiFiIdentity() async {
+            let information = await WiFiInformationProvider().read()
+            #expect(information.ssid == nil)
+            #expect(information.bssid == nil)
+            #expect(information.security == nil)
+        }
+    }
+
     /// Whatever the hardware, the provider never reports device-wide utilisation,
     /// and reports no app figure because SystemScope submits no GPU work.
     @Test func providerNeverReportsUtilisation() async {

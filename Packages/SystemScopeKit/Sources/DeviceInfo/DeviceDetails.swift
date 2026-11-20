@@ -266,6 +266,7 @@ public struct SensorStatus: Sendable, Equatable, Identifiable {
 /// Everything the Device tab shows beyond `DeviceSummary`.
 public struct DeviceDetails: Sendable, Equatable {
     public var hardwareIdentifier: String?
+    public var cpu: CPUInformation?
     /// Nil when the identifier is not in the catalogue (DEV-04).
     public var catalogueEntry: DeviceCatalogue.Entry?
     public var catalogueVersion: String
@@ -284,6 +285,7 @@ public struct DeviceDetails: Sendable, Equatable {
 
     public init(
         hardwareIdentifier: String? = nil,
+        cpu: CPUInformation? = nil,
         catalogueEntry: DeviceCatalogue.Entry? = nil,
         catalogueVersion: String = DeviceCatalogue.bundled.version,
         deviceFamily: String? = nil,
@@ -300,6 +302,7 @@ public struct DeviceDetails: Sendable, Equatable {
         observedAt: Date = .now
     ) {
         self.hardwareIdentifier = hardwareIdentifier
+        self.cpu = cpu
         self.catalogueEntry = catalogueEntry
         self.catalogueVersion = catalogueVersion
         self.deviceFamily = deviceFamily

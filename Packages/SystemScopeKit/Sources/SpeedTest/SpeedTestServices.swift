@@ -2,19 +2,30 @@ import Foundation
 
 /// Idle latency: HTTP round trips to the lightweight ping endpoint.
 enum LatencyTestService {
+    struct Result: Sendable {
+        var roundTrips: [Double]
+        var packetLossPercentage: Double
+    }
+
     /// Returns the valid round trips in order. One warm-up request opens the
-    /// connection and is thrown away; failed requests are discarded.
-    static func measure(client: any SpeedTestServerClient, samples: Int) async throws -> [Double] {
+    /// connection and is thrown away; failed requests count as packet loss.
+    static func measure(client: any SpeedTestServerClient, samples: Int) async throws -> Result {
         _ = try? await client.ping()
-        var roundTrips: [Double] = []
+        var roundTrips = [Double]()
+        var failedSamples = 0
         for _ in 0..<samples {
             try Task.checkCancellation()
             if let roundTrip = try? await client.ping(), roundTrip > 0 {
                 roundTrips.append(roundTrip)
+            } else {
+                failedSamples += 1
             }
         }
         guard roundTrips.count >= 3 else { throw SpeedTestError.serverUnreachable }
-        return roundTrips
+        return Result(
+            roundTrips: roundTrips,
+            packetLossPercentage: Double(failedSamples) / Double(samples) * 100
+        )
     }
 }
 
@@ -38,8 +49,8 @@ enum SpeedTestServerSelector {
     static func select(from clients: [any SpeedTestServerClient]) async throws -> any SpeedTestServerClient {
         var best: (client: any SpeedTestServerClient, latency: Double)?
         for client in clients {
-            guard let roundTrips = try? await LatencyTestService.measure(client: client, samples: 3),
-                  let median = SpeedTestMath.median(roundTrips) else { continue }
+            guard let result = try? await LatencyTestService.measure(client: client, samples: 3),
+                  let median = SpeedTestMath.median(result.roundTrips) else { continue }
             if best == nil || median < best!.latency {
                 best = (client, median)
             }

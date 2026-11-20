@@ -32,13 +32,16 @@ public struct SystemDeviceInspector: DeviceInspecting {
     private func readIdentity() -> DeviceDataResult<DeviceSummary> {
         let identifier = Self.hardwareIdentifier()
         let entry = identifier.flatMap(catalogue.entry(for:))
+        let cpu = CPUInformationProvider().read()
         let summary = DeviceSummary(
             modelName: entry?.modelName,
             modelIdentifier: identifier,
             osVersion: UIDevice.current.systemVersion,
             processor: entry?.processor,
-            processorCoreCount: ProcessInfo.processInfo.processorCount,
-            activeCoreCount: ProcessInfo.processInfo.activeProcessorCount
+            processorCoreCount: cpu.physicalCores,
+            performanceCoreCount: cpu.performanceCores,
+            efficiencyCoreCount: cpu.efficiencyCores,
+            activeCoreCount: cpu.logicalCores
         )
         let complete = entry?.processor != nil
         return DeviceDataResult(
@@ -99,7 +102,7 @@ public struct SystemDeviceInspector: DeviceInspecting {
     }
 
     private func readNetwork() async -> DeviceDataResult<DeviceSummary> {
-        let reachable = await SystemNetworkInspector.currentPath()?.isSatisfied
+        let reachable = await NetworkPathMonitor().current()?.isConnected
         return DeviceDataResult(
             value: DeviceSummary(),
             scope: .thisIPhone,

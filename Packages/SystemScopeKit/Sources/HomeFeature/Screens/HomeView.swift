@@ -74,7 +74,12 @@ private struct HomeOverview: View {
                         StorageCard(summary: model.summary)
                     }
                     .fixedSize(horizontal: false, vertical: true)
-                    PerformanceCard(performance: model.performance) { model.open(.gpu) }
+                    PerformanceCard(
+                        performance: model.performance,
+                        processor: model.summary.processor,
+                        processorCores: model.summary.processorCoreCount,
+                        gpu: model.gpu
+                    ) { model.open(.gpu) }
                     NetworkCard(network: model.network) { model.open(.network) }
                 }
             }
@@ -85,6 +90,14 @@ private struct HomeOverview: View {
         .refreshable { await model.refresh() }
         .background(SSScreenBackground())
         .task { await model.refresh() }
+        .task(id: scenePhase == .active) {
+            guard scenePhase == .active else { return }
+            while !Task.isCancelled {
+                try? await Task.sleep(for: .seconds(5))
+                guard !Task.isCancelled else { return }
+                await model.refreshNetwork()
+            }
+        }
         // Values go stale in the background; re-read when the app returns (PRD §7.4).
         .onChange(of: scenePhase) { _, phase in
             if phase == .active {
@@ -403,6 +416,9 @@ private struct StorageCard: View {
 
 private struct PerformanceCard: View {
     let performance: PerformanceSnapshot?
+    let processor: String?
+    let processorCores: Int?
+    let gpu: GPUInformation?
     let open: () -> Void
 
     var body: some View {
@@ -440,10 +456,12 @@ private struct PerformanceCard: View {
                         }
                     }
                 } else {
-                    Text(Strings.performanceUnavailable)
-                        .ssText(.bodyMedium14)
-                        .foregroundStyle(SSColor.textSubtle)
-                        .padding(.trailing, 40)
+                    VStack(alignment: .leading, spacing: 10) {
+                        hardwareRow(Strings.cpu, processor.map { name in
+                            processorCores.map { "\(name) · \($0) \(Strings.cores)" } ?? name
+                        })
+                        hardwareRow(Strings.gpu, gpu?.name)
+                    }
                 }
             }
         }
@@ -466,6 +484,19 @@ private struct PerformanceCard: View {
                 .foregroundStyle(SSColor.textPrimary)
         }
         .lineLimit(1)
+    }
+
+    private func hardwareRow(_ label: String, _ value: String?) -> some View {
+        HStack(alignment: .firstTextBaseline, spacing: 8) {
+            Text(label)
+                .ssText(.bodyMedium14)
+                .foregroundStyle(SSColor.textSubtle)
+            Spacer(minLength: 8)
+            Text(value ?? Strings.unavailable)
+                .ssText(.labelSemibold14)
+                .foregroundStyle(value == nil ? SSColor.textSubtle : SSColor.textPrimary)
+                .multilineTextAlignment(.trailing)
+        }
     }
 }
 

@@ -59,6 +59,23 @@ private struct FixedPath: NetworkPathProviding {
     }
 }
 
+private final class SequencedNetworkInspector: NetworkInspecting, @unchecked Sendable {
+    private let lock = NSLock()
+    private var snapshot: NetworkSnapshot
+
+    init(_ snapshot: NetworkSnapshot) {
+        self.snapshot = snapshot
+    }
+
+    func readNetwork() async -> NetworkSnapshot {
+        lock.withLock { snapshot }
+    }
+
+    func update(to snapshot: NetworkSnapshot) {
+        lock.withLock { self.snapshot = snapshot }
+    }
+}
+
 @MainActor
 struct HomeModelTests {
     private let completed = InternetSpeedTestResult(
@@ -72,11 +89,12 @@ struct HomeModelTests {
         battery: any BatteryMonitoring = SampleBatteryMonitor(),
         speedTester: any SpeedTestRunning = UnconfiguredSpeedTest(),
         history: any SpeedTestHistoryStoring = InMemorySpeedTestRepository(),
-        path: FixedPath = FixedPath()
+        path: FixedPath = FixedPath(),
+        networkInspector: any NetworkInspecting = SampleNetworkInspector()
     ) -> HomeModel {
         HomeModel(
             inspector: SampleDeviceInspector(),
-            networkInspector: SampleNetworkInspector(),
+            networkInspector: networkInspector,
             gpuInspector: SampleGPUInformationProvider(),
             battery: battery,
             insights: insights,
@@ -100,6 +118,19 @@ struct HomeModelTests {
         #expect(model.network?.interface == .wifi)
         #expect(model.todayUsage != nil)
         #expect(model.health == .healthy)
+    }
+
+    @Test func networkRefreshUsesLatestInterfaceCounters() async {
+        let initial = NetworkSnapshot(isConnected: true, interface: .wifi, receivedBytes: 100, sentBytes: 20)
+        let inspector = SequencedNetworkInspector(initial)
+        let model = makeModel(networkInspector: inspector)
+
+        await model.refresh()
+        #expect(model.network?.receivedBytes == 100)
+        inspector.update(to: NetworkSnapshot(isConnected: true, interface: .wifi, receivedBytes: 200, sentBytes: 40))
+        await model.refreshNetwork()
+        #expect(model.network?.receivedBytes == 200)
+        #expect(model.network?.sentBytes == 40)
     }
 
     /// The live battery reading wins over the scanned one, and "unknown" stays unknown.

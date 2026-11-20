@@ -15,7 +15,9 @@ public enum GPUCapability: Sendable, Hashable {
 /// GPU identity and capabilities as Metal reports them, plus the two utilisation slots.
 public struct GPUInformation: Sendable, Equatable {
     public var name: String?
+    public var architecture: String?
     public var metalAvailable: Bool
+    public var hasUnifiedMemory: Bool?
     public var supportedCapabilities: [GPUCapability]
     /// Counter sets this GPU can sample (optional advanced capability; varies by model).
     public var counterSets: [String]
@@ -23,6 +25,7 @@ public struct GPUInformation: Sendable, Equatable {
     /// Every GPU family the device reports, e.g. ["Apple9", "Common3", "Metal3"].
     public var families: [String]
     public var maxThreadsPerThreadgroup: Int?
+    public var maxThreadgroupMemoryBytes: Int?
     public var supportsRasterOrderGroups: Bool?
     /// Always nil: iOS has no public source for device-wide GPU utilisation.
     public var deviceWideUtilisation: Double?
@@ -32,24 +35,30 @@ public struct GPUInformation: Sendable, Equatable {
 
     public init(
         name: String? = nil,
+        architecture: String? = nil,
         metalAvailable: Bool = false,
+        hasUnifiedMemory: Bool? = nil,
         supportedCapabilities: [GPUCapability] = [],
         counterSets: [String] = [],
         recommendedMaxWorkingSetBytes: UInt64? = nil,
         families: [String] = [],
         maxThreadsPerThreadgroup: Int? = nil,
+        maxThreadgroupMemoryBytes: Int? = nil,
         supportsRasterOrderGroups: Bool? = nil,
         deviceWideUtilisation: Double? = nil,
         appGPUExecutionTimeMs: Double? = nil,
         observedAt: Date = .now
     ) {
         self.name = name
+        self.architecture = architecture
         self.metalAvailable = metalAvailable
+        self.hasUnifiedMemory = hasUnifiedMemory
         self.supportedCapabilities = supportedCapabilities
         self.counterSets = counterSets
         self.recommendedMaxWorkingSetBytes = recommendedMaxWorkingSetBytes
         self.families = families
         self.maxThreadsPerThreadgroup = maxThreadsPerThreadgroup
+        self.maxThreadgroupMemoryBytes = maxThreadgroupMemoryBytes
         self.supportsRasterOrderGroups = supportsRasterOrderGroups
         self.deviceWideUtilisation = deviceWideUtilisation
         self.appGPUExecutionTimeMs = appGPUExecutionTimeMs
@@ -104,12 +113,15 @@ public struct GPUInformationProvider: GPUInspecting {
 
         let information = GPUInformation(
             name: device.name.isEmpty ? nil : device.name,
+            architecture: String(describing: device.architecture),
             metalAvailable: true,
+            hasUnifiedMemory: device.hasUnifiedMemory,
             supportedCapabilities: capabilities,
             counterSets: (device.counterSets ?? []).map(\.name),
             recommendedMaxWorkingSetBytes: UInt64(device.recommendedMaxWorkingSetSize),
             families: families,
             maxThreadsPerThreadgroup: device.maxThreadsPerThreadgroup.width,
+            maxThreadgroupMemoryBytes: device.maxThreadgroupMemoryLength > 0 ? device.maxThreadgroupMemoryLength : nil,
             supportsRasterOrderGroups: device.areRasterOrderGroupsSupported,
             appGPUExecutionTimeMs: await performance?.latestExecutionTimeMs
         )
@@ -160,11 +172,14 @@ public struct SampleGPUInformationProvider: GPUInspecting {
         DeviceDataResult(
             value: GPUInformation(
                 name: "Apple A17 Pro GPU",
+                architecture: "Apple GPU architecture",
                 metalAvailable: true,
+                hasUnifiedMemory: true,
                 supportedCapabilities: [.appleFamily(9), .metal3, .unifiedMemory, .float32Filtering, .rayTracing],
                 recommendedMaxWorkingSetBytes: 5_726_623_061,
                 families: ["Apple9", "Common3", "Metal3"],
                 maxThreadsPerThreadgroup: 1_024,
+                maxThreadgroupMemoryBytes: 32_768,
                 supportsRasterOrderGroups: true
             ),
             scope: .deviceSpecification,

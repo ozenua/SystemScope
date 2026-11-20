@@ -24,6 +24,8 @@ struct NetworkView: View {
 
                     connection
 
+                    networkDetails
+
                     VStack(spacing: 16) {
                         Button {
                             model.open(.dataUsage)
@@ -135,6 +137,40 @@ struct NetworkView: View {
         guard let network = model.network else { return Strings.unavailable }
         guard network.isConnected == true else { return Strings.notConnected }
         return network.networkName ?? network.interface?.title ?? Strings.unavailable
+    }
+
+    private var networkDetails: some View {
+        HomeCard {
+            VStack(alignment: .leading, spacing: 14) {
+                detailRow(Strings.wifiName, model.network?.networkName ?? Strings.wifiInfoUnavailable)
+                detailRow(Strings.wifiBSSID, model.network?.wifiBSSID ?? Strings.wifiInfoUnavailable)
+                detailRow(Strings.wifiSecurity, model.network?.wifiSecurity ?? Strings.wifiInfoUnavailable)
+                detailRow(Strings.cellularTechnology, model.network?.cellularTechnology)
+                detailRow(Strings.carrier, model.network?.carrierName)
+                if let network = model.network {
+                    let condition = [network.isConstrained ? Strings.lowDataMode : nil,
+                                     network.isExpensive ? Strings.metered : nil]
+                        .compactMap { $0 }
+                        .joined(separator: " · ")
+                    detailRow(Strings.conditions, condition.isEmpty ? nil : condition)
+                } else {
+                    detailRow(Strings.conditions, nil)
+                }
+            }
+        }
+    }
+
+    private func detailRow(_ label: String, _ value: String?) -> some View {
+        HStack(alignment: .firstTextBaseline, spacing: 12) {
+            Text(label)
+                .ssText(.bodyMedium14)
+                .foregroundStyle(SSColor.textSubtle)
+            Spacer(minLength: 8)
+            Text(value ?? Strings.unavailable)
+                .ssText(.labelSemibold14)
+                .foregroundStyle(value == nil ? SSColor.textSubtle : SSColor.textPrimary)
+                .multilineTextAlignment(.trailing)
+        }
     }
 
     /// Derived from the current path only: connected and unconstrained is Good.

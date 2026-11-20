@@ -1,3 +1,4 @@
+import Core
 import DesignSystem
 import DeviceInfo
 import SwiftUI
@@ -27,11 +28,14 @@ struct GPUView: View {
 
                     section(Strings.gpuHardware, scope: Strings.scopeSpecification) {
                         row(Strings.gpuName, model.gpu?.name)
+                        row(Strings.architecture, model.gpu?.architecture)
                         row(Strings.metal, model.gpu.map { $0.metalAvailable ? Strings.available : Strings.notAvailable })
+                        row(Strings.gpuFamilies, families)
+                        row(Strings.unifiedMemory, unifiedMemory)
+                        row(Strings.threadgroupMemory, threadgroupMemory)
+                        row(Strings.maxThreads, model.gpu?.maxThreadsPerThreadgroup.map(String.init))
+                        row(Strings.workingSet, workingSet)
                         row(Strings.capabilities, capabilities)
-                        if let bytes = model.gpu?.recommendedMaxWorkingSetBytes, bytes > 0 {
-                            row(Strings.workingSet, Format.bytes(Int64(clamping: bytes)))
-                        }
                         row(Strings.counterSets, counterSets, fallback: Strings.countersUnsupported)
                     }
 
@@ -64,8 +68,32 @@ struct GPUView: View {
 
     private var capabilities: String? {
         guard let gpu = model.gpu, gpu.metalAvailable else { return nil }
-        let names = gpu.supportedCapabilities.map(\.title)
+        let names = gpu.supportedCapabilities
+            .filter {
+                if case .appleFamily = $0 { return false }
+                return $0 != .unifiedMemory
+            }
+            .map(\.title)
         return names.isEmpty ? Strings.noCapabilities : names.joined(separator: "\n")
+    }
+
+    private var families: String? {
+        guard let families = model.gpu?.families, !families.isEmpty else { return nil }
+        return families.joined(separator: "\n")
+    }
+
+    private var unifiedMemory: String? {
+        model.gpu?.hasUnifiedMemory.map { $0 ? Strings.available : Strings.notAvailable }
+    }
+
+    private var threadgroupMemory: String? {
+        guard let bytes = model.gpu?.maxThreadgroupMemoryBytes, bytes > 0 else { return nil }
+        return ByteFormatting.memory(UInt64(bytes), fractionDigits: 0)
+    }
+
+    private var workingSet: String? {
+        guard let bytes = model.gpu?.recommendedMaxWorkingSetBytes, bytes > 0 else { return nil }
+        return ByteFormatting.memory(bytes, fractionDigits: 1)
     }
 
     private var counterSets: String? {

@@ -44,6 +44,17 @@ public struct SampleDeviceDetailsProvider: DeviceDetailsProviding {
 
     public static let details = DeviceDetails(
         hardwareIdentifier: "iPhone16,1",
+        cpu: CPUInformation(
+            hardwareIdentifier: "iPhone16,1",
+            architecture: "arm64",
+            physicalCores: 6,
+            logicalCores: 6,
+            performanceCores: 2,
+            efficiencyCores: 4,
+            l1DataCacheBytes: 64 * 1024,
+            l1InstructionCacheBytes: 128 * 1024,
+            l2CacheBytes: 16 * 1024 * 1024
+        ),
         catalogueEntry: DeviceCatalogue.Entry(
             modelName: "iPhone 15 Pro",
             processor: "Apple A17 Pro",

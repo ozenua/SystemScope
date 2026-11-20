@@ -104,6 +104,7 @@ struct ProcessorView: View {
     var body: some View {
         let summary = model.summary
         let specs = model.specifications
+        let cpu = model.details?.cpu
         let architecture = model.details?.architecture
         DevicePage {
             DeviceDetailHeader(
@@ -165,6 +166,14 @@ struct ProcessorView: View {
                     Spec(label: L("Process"), value: specs?.processNanometres.map { "\($0) nm" }, fallback: Fallback.notInCatalogue),
                     Spec(label: L("Released"), value: specs?.releaseYear.map(String.init), fallback: Fallback.notInCatalogue),
                     Spec(label: L("Graphics"), value: model.gpu?.name),
+                ])
+            }
+            ExpandableSection(title: L("Cache"), subtitle: L("Processor instruction and data cache")) {
+                SpecificationList(specs: [
+                    Spec(label: L("L1 instruction cache"), value: cpu?.l1InstructionCacheBytes.map { ByteFormatting.memory(UInt64($0), fractionDigits: 0) }),
+                    Spec(label: L("L1 data cache"), value: cpu?.l1DataCacheBytes.map { ByteFormatting.memory(UInt64($0), fractionDigits: 0) }),
+                    Spec(label: L("L2 cache"), value: cpu?.l2CacheBytes.map { ByteFormatting.memory(UInt64($0), fractionDigits: 0) }),
+                    Spec(label: L("L3 cache"), value: cpu?.l3CacheBytes.map { ByteFormatting.memory(UInt64($0), fractionDigits: 0) }),
                 ])
             }
             RelatedMonitorCard(

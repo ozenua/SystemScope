@@ -22,17 +22,19 @@ public struct SystemDeviceDetailsProvider: DeviceDetailsProviding {
     @MainActor
     private func read() -> DeviceDetails {
         let identifier = SystemDeviceInspector.hardwareIdentifier()
+        let cpu = CPUInformationProvider().read()
         let device = UIDevice.current
         let locale = Locale.current
         return DeviceDetails(
             hardwareIdentifier: identifier,
+            cpu: cpu,
             catalogueEntry: identifier.flatMap(catalogue.entry(for:)),
             catalogueVersion: catalogue.version,
             deviceFamily: device.model,
             osName: "iOS",
             osVersion: device.systemVersion,
             osBuild: DeviceDetails.parseBuild(ProcessInfo.processInfo.operatingSystemVersionString),
-            architecture: Self.architecture,
+            architecture: cpu.architecture,
             display: Self.readDisplay(),
             cameras: Self.readCameras(),
             sensors: Self.readSensors(),

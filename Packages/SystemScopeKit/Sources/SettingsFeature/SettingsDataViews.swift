@@ -326,7 +326,7 @@ struct PrivacyView: View {
                 }
                 SettingsRow(icon: .info, title: L("What SystemScope collects")) { model.sheet = .whatWeCollect }
                 SettingsRow(icon: .close, title: L("Clear local data"), subtitle: L("Removes history from this iPhone"), destructive: true, showsChevron: false) { model.beginClear() }
-                SettingsRow(icon: .close, title: L("Reset local device profile"), subtitle: L("Restores the default device name"), destructive: true, showsChevron: false) { model.dialog = .resetDeviceProfile }
+                SettingsRow(icon: .close, title: L("Reset local device profile"), subtitle: L("Restores your iPhone's detected name"), destructive: true, showsChevron: false) { model.dialog = .resetDeviceProfile }
             }
         }
         .task { await model.refreshStatuses() }
