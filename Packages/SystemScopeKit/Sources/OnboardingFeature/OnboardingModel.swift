@@ -140,7 +140,7 @@ public final class OnboardingModel {
             resetScan()
             step = .inspect
         case .inspect: step = .ready
-        case .ready: step = .premium
+        case .ready: finish()
         case .premium: finish()
         }
     }

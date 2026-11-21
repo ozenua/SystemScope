@@ -226,8 +226,7 @@ struct SettingsOverview: View {
     }
 }
 
-/// Subscription Card. No StoreKit entitlement exists yet (M6), so this always shows
-/// the free state; it never claims an active subscription.
+/// Access card. Every diagnostic feature is available without a subscription.
 struct SubscriptionCard: View {
     var compact = false
     var action: (() -> Void)?
@@ -238,18 +237,18 @@ struct SubscriptionCard: View {
                 SSIconView(.crown, size: 22, color: SSColor.textStrong)
                     .frame(width: 44, height: 44)
                     .overlay(RoundedRectangle(cornerRadius: 14, style: .continuous).strokeBorder(SSColor.border, lineWidth: 1))
-                Text(L("SystemScope Premium")).ssText(.metric17).foregroundStyle(SSColor.textStrong)
+                Text(L("SystemScope access")).ssText(.metric17).foregroundStyle(SSColor.textStrong)
                 Spacer()
-                StatusPill(title: L("Free"), dot: SSColor.textFaint)
+                StatusPill(title: L("Included"), dot: SSColor.positiveFill)
             }
-            Text(L("Unlock the complete picture. Explore SystemScope Premium."))
+            Text(L("All SystemScope features are available on this device."))
                 .ssText(.bodyMedium16)
                 .foregroundStyle(SSColor.textStrong)
-            Text(L("Detailed monitoring, trends, custom alerts and reports"))
+            Text(L("Detailed monitoring, trends, custom alerts and reports are included."))
                 .ssText(.caption12)
                 .foregroundStyle(SSColor.textTertiary)
             if let action {
-                Button(L("Explore Premium"), action: action)
+                Button(L("View included features"), action: action)
                     .buttonStyle(SSPrimaryButtonStyle())
             }
         }

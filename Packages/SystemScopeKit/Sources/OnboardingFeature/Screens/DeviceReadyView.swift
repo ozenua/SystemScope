@@ -4,7 +4,7 @@ import DeviceInfo
 import SwiftUI
 
 /// Your Device Is Ready: summarises what the scan identified and what iOS does not
-/// expose (ONB-09), then offers Premium with a clear free path (ONB-10).
+/// expose (ONB-09), then opens the full app.
 struct DeviceReadyView: View {
     let model: OnboardingModel
 
@@ -32,12 +32,11 @@ struct DeviceReadyView: View {
                 VStack(spacing: 10) {
                     OnboardingHeading(title: Strings.readyTitle, message: Strings.readyBody, spacing: 8)
                     summaryCard
-                    premiumCard
                 }
                 .padding(.horizontal, 16)
                 .padding(.top, 8)
             } footer: {
-                Button(Strings.continueWithPreview, action: model.finish)
+                Button(Strings.continueAction, action: model.finish)
                     .buttonStyle(.ssSecondaryCompact)
                     .padding(.horizontal, 16)
                     .padding(.bottom, 16)
@@ -163,37 +162,4 @@ struct DeviceReadyView: View {
             : Strings.inUseOf(ByteFormatting.memory(total))
     }
 
-    // MARK: - Premium intro
-
-    private var premiumCard: some View {
-        VStack(alignment: .leading, spacing: 8) {
-            PremiumBadge(style: .onDark)
-            Text(Strings.premiumIntroTitle)
-                .ssText(.heading24)
-                .foregroundStyle(.white)
-                .accessibilityAddTraits(.isHeader)
-            Text(Strings.premiumIntroBody)
-                .ssText(.body14)
-                .foregroundStyle(.white.opacity(0.65))
-
-            SSFlowLayout(spacing: 6) {
-                ForEach(Strings.premiumChips, id: \.self) { chip in
-                    Text(chip)
-                        .ssText(.captionMedium12)
-                        .foregroundStyle(.white.opacity(0.9))
-                        .padding(.horizontal, 10)
-                        .padding(.vertical, 6)
-                        .overlay(Capsule().strokeBorder(.white.opacity(0.18), lineWidth: 1))
-                }
-            }
-            .padding(.bottom, 6)
-
-            Button(Strings.explorePremium, action: model.goForward)
-                .buttonStyle(.ssPrimaryLight)
-        }
-        .frame(maxWidth: .infinity, alignment: .leading)
-        .padding(.horizontal, 20)
-        .padding(.vertical, 18)
-        .background(SSColor.ink, in: RoundedRectangle(cornerRadius: SSRadius.card, style: .continuous))
-    }
 }

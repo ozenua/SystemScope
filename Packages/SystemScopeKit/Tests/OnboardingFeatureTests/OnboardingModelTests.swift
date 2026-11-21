@@ -20,12 +20,14 @@ struct OnboardingModelTests {
     private func makeModel(
         inspector: any DeviceInspecting = SampleDeviceInspector(),
         notifications: any NotificationAuthorizing = SampleNotificationAuthorizer(result: .denied),
-        finished: Finished = Finished()
+        finished: Finished = Finished(),
+        initialStep: OnboardingModel.Step = .splash
     ) -> OnboardingModel {
         OnboardingModel(
             inspector: inspector,
             notifications: notifications,
             premium: SamplePremiumOffering(),
+            initialStep: initialStep,
             minimumStageDuration: .zero,
             onFinish: { finished.value = true }
         )
@@ -102,5 +104,12 @@ struct OnboardingModelTests {
         await model.startPremium()
         #expect(model.notice == .purchasesUnavailable)
         #expect(finished.value == false)
+    }
+
+    @Test func readyScreenOpensFullAppWithoutPremiumStep() {
+        let finished = Finished()
+        let model = makeModel(finished: finished, initialStep: .ready)
+        model.goForward()
+        #expect(finished.value)
     }
 }

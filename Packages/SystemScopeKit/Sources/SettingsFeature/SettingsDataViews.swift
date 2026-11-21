@@ -240,8 +240,8 @@ struct SubscriptionView: View {
             SettingsHeader(title: L("Subscription"), subtitle: L("Your SystemScope plan."), onBack: model.goBack)
             SubscriptionCard()
             SettingsGroup(title: L("Plan details")) {
-                detail(L("Current plan"), L("Free"))
-                detail(L("Status"), L("No active subscription"))
+                detail(L("Access"), L("All features included"))
+                detail(L("Status"), L("Available on this device"))
             }
             SettingsGroup(title: L("Premium includes")) {
                 ForEach([L("Detailed monitoring"), L("Historical trends"), L("Advanced charts"), L("Custom alerts"), L("Monitoring reports")], id: \.self) { benefit in
@@ -256,8 +256,8 @@ struct SubscriptionView: View {
                 }
             }
             InfoBanner(
-                title: L("Purchases aren’t open yet"),
-                message: L("Subscriptions will be sold through the App Store. Prices shown come from the store configuration.")
+                title: L("No subscription required"),
+                message: L("SystemScope diagnostics and monitoring features are available without a purchase.")
             )
             SettingsGroup(title: L("Manage")) {
                 Button { Task { await model.restorePurchases() } } label: {
