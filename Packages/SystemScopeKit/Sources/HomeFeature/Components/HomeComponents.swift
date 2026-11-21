@@ -193,7 +193,7 @@ struct StatCell: View {
             }
             .frame(maxWidth: .infinity, alignment: .leading)
             if let chip {
-                SSIconChip(chip, tint: .black, fill: Color.black.opacity(0.05))
+                SSIconChip(chip, tint: SSColor.textStrong, fill: SSColor.iconChip)
             }
         }
         .accessibilityElement(children: .combine)

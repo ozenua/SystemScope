@@ -45,7 +45,7 @@ public struct SSSecondaryButtonStyle: ButtonStyle {
         configuration.label
             .ssText(.button18)
             .multilineTextAlignment(.center)
-            .foregroundStyle(Color(hex: 0x121212))
+            .foregroundStyle(SSColor.textStrong)
             .frame(maxWidth: .infinity)
             .padding(.vertical, compact ? 15 : 20)
             .padding(.horizontal, 20)
@@ -78,7 +78,7 @@ public struct SSBackButton: View {
         Button(action: action) {
             Image(systemName: "chevron.left")
                 .font(.system(size: 13, weight: .bold))
-                .foregroundStyle(Color(hex: 0x1D1B20))
+                .foregroundStyle(SSColor.textStrong)
                 .frame(width: 32, height: 32)
                 .background(SSColor.hairline, in: Circle())
                 .frame(width: 44, height: 44)

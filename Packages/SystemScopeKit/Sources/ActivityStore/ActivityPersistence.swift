@@ -31,10 +31,11 @@ public actor FileActivityPersistence: ActivityPersisting {
         let data = try Data(contentsOf: url)
         let decoder = JSONDecoder()
         decoder.dateDecodingStrategy = .iso8601
-        let snapshot = try decoder.decode(ActivitySnapshot.self, from: data)
+        var snapshot = try decoder.decode(ActivitySnapshot.self, from: data)
         guard snapshot.version <= ActivitySnapshot.currentVersion else {
             throw ActivityPersistenceError.unsupportedVersion(snapshot.version)
         }
+        snapshot.version = ActivitySnapshot.currentVersion
         return snapshot
     }
 

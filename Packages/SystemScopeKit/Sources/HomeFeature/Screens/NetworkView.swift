@@ -8,7 +8,7 @@ struct NetworkView: View {
 
     var body: some View {
         VStack(spacing: 0) {
-            HomeTopBar(onBack: model.goBack, trailingTitle: Strings.runSpeedTest, onTrailing: model.openSpeedTest)
+            networkTopBar
 
             ScrollView {
                 VStack(alignment: .leading, spacing: 24) {
@@ -44,14 +44,10 @@ struct NetworkView: View {
                         usageCard
                     }
 
-                    HStack(spacing: 8) {
-                        Text(Strings.networkHealth)
-                            .ssText(.labelSemibold14)
-                            .foregroundStyle(SSColor.textPrimary)
-                        healthPill
-                    }
-                    .frame(maxWidth: .infinity)
-                    .accessibilityElement(children: .combine)
+                    Button(Strings.runSpeedTest, action: model.openSpeedTest)
+                        .ssText(.section18)
+                        .foregroundStyle(SSColor.textPrimary)
+                        .frame(maxWidth: .infinity, minHeight: 44)
                 }
                 .padding(.horizontal, 16)
                 .padding(.top, 8)
@@ -60,6 +56,24 @@ struct NetworkView: View {
         }
         .background(SSScreenBackground())
         .task { await model.refresh() }
+    }
+
+    private var networkTopBar: some View {
+        HStack {
+            SSBackButton(label: Strings.back, action: model.goBack)
+                .padding(.leading, -6)
+            Spacer()
+            HStack(spacing: 8) {
+                Text(Strings.networkHealth)
+                    .ssText(.labelSemibold14)
+                    .foregroundStyle(SSColor.textPrimary)
+                healthPill
+            }
+            .accessibilityElement(children: .combine)
+        }
+        .frame(minHeight: 44)
+        .padding(.horizontal, 16)
+        .padding(.top, 22)
     }
 
     // MARK: - Connection

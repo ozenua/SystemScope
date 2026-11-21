@@ -56,7 +56,7 @@ public protocol HomeInsightsProviding: Sendable {
     func dataUsage(for range: DataUsageRange) async -> DataUsageSeries?
 }
 
-/// What ships until usage history recording (M3/M4) exists.
+/// Empty production fallback when no observation store is available.
 public struct UnavailableHomeInsights: HomeInsightsProviding {
     public init() {}
 

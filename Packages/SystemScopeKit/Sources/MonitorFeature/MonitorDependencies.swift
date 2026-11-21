@@ -1,9 +1,8 @@
 import DeviceInfo
 import Foundation
 
-// History-backed content for the Monitor overview. Until alerts, sessions and stored
-// observations exist (M3/M4), the unavailable provider returns nothing and the page
-// shows empty states; it never invents events or readings.
+// History-backed content for the Monitor overview. The unavailable provider remains
+// useful for previews and integrations that do not supply an observation store.
 
 public struct MonitorAlert: Identifiable, Sendable, Equatable {
     public enum Kind: Sendable {

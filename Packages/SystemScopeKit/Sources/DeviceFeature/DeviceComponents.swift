@@ -326,7 +326,7 @@ struct OutlinedIcon: View {
 
     var body: some View {
         let shape = RoundedRectangle(cornerRadius: cornerRadius ?? size / 2, style: .continuous)
-        SSIconView(icon, size: iconSize, color: Color(hex: 0x292D32))
+        SSIconView(icon, size: iconSize, color: SSColor.textStrong)
             .frame(width: size, height: size)
             .overlay(shape.strokeBorder(SSColor.border, lineWidth: 1))
     }

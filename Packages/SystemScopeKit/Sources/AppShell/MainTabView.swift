@@ -68,13 +68,14 @@ struct MainTabView: View {
         self.environment = environment
         let preferences = environment.preferences
         let log = ActivityLog(persistence: environment.activityPersistence)
+        let persistedInsights = ActivityInsightsProvider(source: { log.snapshot })
         _activityLog = State(initialValue: log)
         _home = State(initialValue: HomeModel(
             inspector: environment.inspector,
             networkInspector: environment.networkInspector,
             gpuInspector: environment.gpuInspector,
             battery: environment.battery,
-            insights: environment.homeInsights,
+            insights: environment.homeInsights is UnavailableHomeInsights ? persistedInsights : environment.homeInsights,
             speedTester: environment.speedTester,
             speedTestHistory: environment.speedTestHistory,
             pathMonitor: environment.pathMonitor,
@@ -90,7 +91,7 @@ struct MainTabView: View {
             gpuInspector: environment.gpuInspector,
             battery: environment.battery,
             resources: environment.resources,
-            insights: environment.monitorInsights,
+            insights: environment.monitorInsights is UnavailableMonitorInsights ? persistedInsights : environment.monitorInsights,
             speedTestHistory: environment.speedTestHistory,
             displayName: { preferences.deviceDisplayName },
             activityLog: log

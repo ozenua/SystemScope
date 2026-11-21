@@ -194,6 +194,29 @@ struct PersistenceTests {
         #expect(await store.stored.events.isEmpty)
     }
 
+    @Test func observationsRoundTripAndFollowActivityRetention() async {
+        let now = Date(timeIntervalSince1970: 1_800_000_000)
+        let old = DeviceObservation(date: now.addingTimeInterval(-40 * 86_400), batteryLevel: 20)
+        let recent = DeviceObservation(date: now.addingTimeInterval(-60), batteryLevel: 80)
+        let snapshot = ActivitySnapshot(observations: [old, recent])
+        let (log, store) = await makeLog(snapshot, now: now)
+        #expect(log.observations.count == 1)
+        #expect(log.observations.first?.batteryLevel == 80)
+        try? await settle()
+        #expect(await store.stored.observations.count == 1)
+    }
+
+    @Test func clearingActivityAlsoClearsObservations() async throws {
+        let snapshot = ActivitySnapshot(
+            events: [ActivityEvent(kind: .memoryWarning, category: .performance, title: "Warning", detail: "", scope: "", source: "")],
+            observations: [DeviceObservation(batteryLevel: 50)]
+        )
+        let (log, _) = await makeLog(snapshot)
+        let removed = try await log.clearHistory()
+        #expect(removed == 2)
+        #expect(log.events.isEmpty && log.observations.isEmpty)
+    }
+
     @Test func recentSearchesAreDeduplicatedAndCapped() async {
         let (log, _) = await makeLog()
         for index in 0..<15 { log.addRecentSearch("query \(index)") }

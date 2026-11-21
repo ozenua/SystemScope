@@ -58,7 +58,7 @@ public struct SSIconChip: View {
     private let tint: Color
     private let fill: Color
 
-    public init(_ icon: SSIcon, tint: Color = Color(hex: 0x292D32), fill: Color = SSColor.iconChip) {
+    public init(_ icon: SSIcon, tint: Color = SSColor.textStrong, fill: Color = SSColor.iconChip) {
         self.icon = icon
         self.tint = tint
         self.fill = fill

@@ -298,7 +298,7 @@ struct QuickSpecCell: View {
                 VStack(alignment: .leading, spacing: 4) {
                     Text(label)
                         .ssText(.captionMedium13)
-                        .foregroundStyle(Color.black.opacity(0.6))
+                        .foregroundStyle(SSColor.textSubtle)
                     Text(value ?? fallback)
                         .font(.system(size: value == nil ? 16 : 22, weight: .bold))
                         .tracking(-0.66)
@@ -353,7 +353,7 @@ struct DeviceIdentityCard: View {
                 }
                 Text(summary.modelName ?? L("Unknown iPhone model"))
                     .ssText(.label14)
-                    .foregroundStyle(Color.black.opacity(0.75))
+                    .foregroundStyle(SSColor.textStrong.opacity(0.75))
                 if let version = model.details?.osVersion ?? summary.osVersion {
                     Text(L("iOS \(version)"))
                         .ssText(.caption13)

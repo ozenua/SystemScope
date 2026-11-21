@@ -69,7 +69,8 @@ final class ActivityObserver {
         let reading = battery.snapshot
         log.observeBattery(level: reading.level, state: reading.state.map(Self.levelState), lowPowerMode: reading.isLowPowerModeEnabled)
 
-        if let storage = await inspector.readSnapshot(of: .memoryAndStorage).value {
+        let storage = await inspector.readSnapshot(of: .memoryAndStorage).value
+        if let storage {
             log.observeStorage(availableBytes: storage.storageAvailableBytes, totalBytes: storage.storageTotalBytes)
         }
         if let thermal = await inspector.readSnapshot(of: .batteryAndThermal).value?.thermalState {
@@ -85,6 +86,14 @@ final class ActivityObserver {
         }
         let network = await networkInspector.readNetwork()
         log.observeNetwork(Self.describe(network))
+        log.recordObservation(DeviceObservation(
+            batteryLevel: reading.level,
+            storageAvailableBytes: storage?.storageAvailableBytes,
+            storageTotalBytes: storage?.storageTotalBytes,
+            receivedBytes: network.receivedBytes,
+            sentBytes: network.sentBytes,
+            networkInterface: Self.describe(network)
+        ))
     }
 
     /// Settings › Alert Thresholds (SET-05) applied to the recording rules.

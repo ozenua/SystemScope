@@ -339,7 +339,7 @@ struct NetworkMonitorView: View {
                     .minimumScaleFactor(0.7)
             }
             .frame(maxWidth: .infinity, alignment: .leading)
-            SSIconChip(icon, tint: .black, fill: Color.black.opacity(0.05))
+            SSIconChip(icon, tint: SSColor.textStrong, fill: SSColor.iconChip)
         }
         .accessibilityElement(children: .combine)
     }

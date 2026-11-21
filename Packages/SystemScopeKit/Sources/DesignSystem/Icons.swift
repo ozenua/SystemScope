@@ -104,7 +104,7 @@ public struct SSIconView: View {
     private let size: CGFloat
     private let color: Color
 
-    public init(_ icon: SSIcon, size: CGFloat, color: Color = SSColor.ink) {
+    public init(_ icon: SSIcon, size: CGFloat, color: Color = SSColor.textStrong) {
         self.icon = icon
         self.size = size
         self.color = color

@@ -299,14 +299,46 @@ public struct ActivitySettings: Codable, Sendable, Equatable {
     }
 }
 
+public struct DeviceObservation: Codable, Sendable, Equatable, Identifiable {
+    public let id: UUID
+    public let date: Date
+    public var batteryLevel: Int?
+    public var storageAvailableBytes: Int64?
+    public var storageTotalBytes: Int64?
+    public var receivedBytes: UInt64?
+    public var sentBytes: UInt64?
+    public var networkInterface: String?
+
+    public init(
+        id: UUID = UUID(),
+        date: Date = .now,
+        batteryLevel: Int? = nil,
+        storageAvailableBytes: Int64? = nil,
+        storageTotalBytes: Int64? = nil,
+        receivedBytes: UInt64? = nil,
+        sentBytes: UInt64? = nil,
+        networkInterface: String? = nil
+    ) {
+        self.id = id
+        self.date = date
+        self.batteryLevel = batteryLevel
+        self.storageAvailableBytes = storageAvailableBytes
+        self.storageTotalBytes = storageTotalBytes
+        self.receivedBytes = receivedBytes
+        self.sentBytes = sentBytes
+        self.networkInterface = networkInterface
+    }
+}
+
 /// Everything persisted, as one versioned document.
 public struct ActivitySnapshot: Codable, Sendable, Equatable {
-    public static let currentVersion = 1
+    public static let currentVersion = 2
 
     public var version = ActivitySnapshot.currentVersion
     public var events: [ActivityEvent] = []
     public var alerts: [ActivityAlert] = []
     public var sessions: [MonitoringSessionRecord] = []
+    public var observations: [DeviceObservation] = []
     /// Newest first, at most 10 (ACT-07).
     public var recentSearches: [String] = []
     public var settings = ActivitySettings()
@@ -315,14 +347,31 @@ public struct ActivitySnapshot: Codable, Sendable, Equatable {
         events: [ActivityEvent] = [],
         alerts: [ActivityAlert] = [],
         sessions: [MonitoringSessionRecord] = [],
+        observations: [DeviceObservation] = [],
         recentSearches: [String] = [],
         settings: ActivitySettings = ActivitySettings()
     ) {
         self.events = events
         self.alerts = alerts
         self.sessions = sessions
+        self.observations = observations
         self.recentSearches = recentSearches
         self.settings = settings
+    }
+
+    private enum CodingKeys: String, CodingKey {
+        case version, events, alerts, sessions, observations, recentSearches, settings
+    }
+
+    public init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        version = try container.decodeIfPresent(Int.self, forKey: .version) ?? 1
+        events = try container.decodeIfPresent([ActivityEvent].self, forKey: .events) ?? []
+        alerts = try container.decodeIfPresent([ActivityAlert].self, forKey: .alerts) ?? []
+        sessions = try container.decodeIfPresent([MonitoringSessionRecord].self, forKey: .sessions) ?? []
+        observations = try container.decodeIfPresent([DeviceObservation].self, forKey: .observations) ?? []
+        recentSearches = try container.decodeIfPresent([String].self, forKey: .recentSearches) ?? []
+        settings = try container.decodeIfPresent(ActivitySettings.self, forKey: .settings) ?? ActivitySettings()
     }
 }
 

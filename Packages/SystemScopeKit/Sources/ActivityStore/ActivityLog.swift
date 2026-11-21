@@ -57,6 +57,7 @@ public final class ActivityLog {
     public var events: [ActivityEvent] { snapshot.events }
     public var alerts: [ActivityAlert] { snapshot.alerts }
     public var sessions: [MonitoringSessionRecord] { snapshot.sessions }
+    public var observations: [DeviceObservation] { snapshot.observations }
     public var settings: ActivitySettings { snapshot.settings }
     public var recentSearches: [String] { snapshot.recentSearches }
 
@@ -87,11 +88,12 @@ public final class ActivityLog {
     static func applyRetention(to snapshot: inout ActivitySnapshot, now: Date, calendar: Calendar) -> Bool {
         guard let days = snapshot.settings.retention.days,
               let cutoff = calendar.date(byAdding: .day, value: -days, to: now) else { return false }
-        let before = (snapshot.events.count, snapshot.alerts.count, snapshot.sessions.count)
+        let before = (snapshot.events.count, snapshot.alerts.count, snapshot.sessions.count, snapshot.observations.count)
         snapshot.events.removeAll { $0.timestamp < cutoff }
         snapshot.alerts.removeAll { $0.createdAt < cutoff && $0.resolutionState != .open }
         snapshot.sessions.removeAll { ($0.endedAt ?? now) < cutoff }
-        return before != (snapshot.events.count, snapshot.alerts.count, snapshot.sessions.count)
+        snapshot.observations.removeAll { $0.date < cutoff }
+        return before != (snapshot.events.count, snapshot.alerts.count, snapshot.sessions.count, snapshot.observations.count)
     }
 
     private func persist() async {
@@ -130,14 +132,15 @@ public final class ActivityLog {
         mutate { $0.events.removeAll { $0.id == id } }
     }
 
-    /// ACT-10, ACT-11: removes activity events only. Alerts, sessions, the device
+    /// ACT-10, ACT-11: removes activity events and numeric observations. Alerts, sessions, the device
     /// profile and preferences stay. Saved before the change is shown, so a failed
     /// write leaves everything as it was. Returns how many events were removed.
     @discardableResult
     public func clearHistory() async throws -> Int {
         var cleared = snapshot
-        let count = cleared.events.count
+        let count = cleared.events.count + cleared.observations.count
         cleared.events.removeAll()
+        cleared.observations.removeAll()
         try await persistence.save(cleared)
         snapshot = cleared
         lastSaveFailed = false
@@ -150,7 +153,11 @@ public final class ActivityLog {
     public func clear(_ kinds: Set<HistoryKind>) async throws -> Int {
         var cleared = snapshot
         var count = 0
-        if kinds.contains(.activity) { count += cleared.events.count; cleared.events.removeAll() }
+        if kinds.contains(.activity) {
+            count += cleared.events.count + cleared.observations.count
+            cleared.events.removeAll()
+            cleared.observations.removeAll()
+        }
         if kinds.contains(.alerts) { count += cleared.alerts.count; cleared.alerts.removeAll() }
         if kinds.contains(.sessions) {
             // An active session keeps recording; only finished ones are removed.
@@ -170,7 +177,7 @@ public final class ActivityLog {
         encoder.dateEncodingStrategy = .iso8601
         func size<T: Encodable>(_ value: T) -> Int { (try? encoder.encode(value).count) ?? 0 }
         return [
-            .activity: size(snapshot.events),
+            .activity: size(snapshot.events) + (snapshot.observations.isEmpty ? 0 : size(snapshot.observations)),
             .alerts: size(snapshot.alerts),
             .sessions: size(snapshot.sessions),
         ]
@@ -518,6 +525,16 @@ public extension ActivityLog {
             scope: L("This iPhone"),
             source: "NWPathMonitor"
         ))
+    }
+
+    func recordObservation(_ observation: DeviceObservation) {
+        guard snapshot.settings.recordActivity else { return }
+        mutate {
+            $0.observations.insert(observation, at: 0)
+            if $0.observations.count > 20_000 {
+                $0.observations.removeLast($0.observations.count - 20_000)
+            }
+        }
     }
 
     func recordMemoryWarning() {
