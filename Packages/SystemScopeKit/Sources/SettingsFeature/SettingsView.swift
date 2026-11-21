@@ -10,7 +10,6 @@ public struct SettingsView: View {
     public init(model: SettingsModel) {
         self.model = model
     }
-
     public var body: some View {
         NavigationStack(path: $model.path) {
             SettingsOverview(model: model)
@@ -23,7 +22,6 @@ public struct SettingsView: View {
                     case .appearance: AppearanceView(model: model)
                     case .data: DataHistoryView(model: model)
                     case .export: ExportView(model: model)
-                    case .subscription: SubscriptionView(model: model)
                     case .privacy: PrivacyView(model: model)
                     case .support: SupportView(model: model)
                     case .about: AboutView(model: model)
@@ -109,24 +107,15 @@ struct SettingsOverview: View {
             VStack(alignment: .leading, spacing: 24) {
                 header
                 deviceProfile(device)
-                SubscriptionCard(compact: true) { model.open(.subscription) }
-                SettingsGroup(title: L("Monitoring")) {
+                SettingsGroup(title: nil) {
                     SettingsRow(icon: .activity, title: L("Monitoring Preferences"), subtitle: L("What SystemScope measures and shows")) { model.open(.monitoring) }
                     SettingsRow(icon: .refresh, title: L("Refresh Preferences"), value: settings.refreshOnEntry ? L("On open") : L("Manual")) { model.open(.monitoring) }
-                }
-                SettingsGroup(title: L("Notifications")) {
                     SettingsRow(icon: .notification, title: L("Notification Preferences"), value: model.notificationsDelivered ? L("On") : L("Off")) { model.open(.notifications) }
                     SettingsRow(icon: .warning, title: L("Alert Thresholds"), value: settings.thresholdAlertsEnabled ? L("\(settings.activeThresholdCount) active") : L("Off")) { model.open(.thresholds) }
-                }
-                SettingsGroup(title: L("Appearance")) {
                     SettingsRow(icon: .brush, title: L("Theme"), value: AppearanceView.label(settings.theme)) { model.open(.appearance) }
                     SettingsRow(icon: .monitor, title: L("Display Preferences")) { model.open(.appearance) }
-                }
-                SettingsGroup(title: L("Data & Privacy")) {
                     SettingsRow(icon: .storage, title: L("Data & History"), value: SettingsFormat.bytes(model.measuredTotal)) { model.open(.data) }
                     SettingsRow(icon: .shieldTick, title: L("Privacy & Permissions")) { model.open(.privacy) }
-                }
-                SettingsGroup(title: L("Application")) {
                     SettingsRow(icon: .messageQuestion, title: L("Support")) { model.open(.support) }
                     SettingsRow(icon: .info, title: L("About SystemScope"), value: model.dependencies.appVersion) { model.open(.about) }
                 }
@@ -223,37 +212,5 @@ struct SettingsOverview: View {
         }
         .frame(maxWidth: .infinity)
         .padding(.top, 4)
-    }
-}
-
-/// Access card. Every diagnostic feature is available without a subscription.
-struct SubscriptionCard: View {
-    var compact = false
-    var action: (() -> Void)?
-
-    var body: some View {
-        VStack(alignment: .leading, spacing: 14) {
-            HStack(spacing: 12) {
-                SSIconView(.crown, size: 22, color: SSColor.textStrong)
-                    .frame(width: 44, height: 44)
-                    .overlay(RoundedRectangle(cornerRadius: 14, style: .continuous).strokeBorder(SSColor.border, lineWidth: 1))
-                Text(L("SystemScope access")).ssText(.metric17).foregroundStyle(SSColor.textStrong)
-                Spacer()
-                StatusPill(title: L("Included"), dot: SSColor.positiveFill)
-            }
-            Text(L("All SystemScope features are available on this device."))
-                .ssText(.bodyMedium16)
-                .foregroundStyle(SSColor.textStrong)
-            Text(L("Detailed monitoring, trends, custom alerts and reports are included."))
-                .ssText(.caption12)
-                .foregroundStyle(SSColor.textTertiary)
-            if let action {
-                Button(L("View included features"), action: action)
-                    .buttonStyle(SSPrimaryButtonStyle())
-            }
-        }
-        .padding(20)
-        .background(SSColor.surface, in: RoundedRectangle(cornerRadius: 24, style: .continuous))
-        .overlay(RoundedRectangle(cornerRadius: 24, style: .continuous).strokeBorder(SSColor.border, lineWidth: 1))
     }
 }

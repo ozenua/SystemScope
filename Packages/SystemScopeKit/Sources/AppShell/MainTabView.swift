@@ -339,7 +339,6 @@ extension MainTabView {
         case "appearance": model.path = [.appearance]
         case "data": model.path = [.data]
         case "export": model.path = [.export]
-        case "subscription": model.path = [.subscription]
         case "privacy": model.path = [.privacy]
         case "support": model.path = [.support]
         case "about": model.path = [.about]

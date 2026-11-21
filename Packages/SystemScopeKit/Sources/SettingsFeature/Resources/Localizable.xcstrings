@@ -107,9 +107,6 @@
     "Adds the details below to support requests. Nothing else is shared." : {
 
     },
-    "Advanced charts" : {
-
-    },
     "Alert categories" : {
 
     },
@@ -141,9 +138,6 @@
 
     },
     "Appearance defaults restored" : {
-
-    },
-    "Application" : {
 
     },
     "Are you sure?" : {
@@ -181,6 +175,9 @@
 
     },
     "Chip, memory, display and cameras" : {
+
+    },
+    "Choose Light, Dark or System to match your preference." : {
 
     },
     "Choose what deserves your attention." : {
@@ -243,12 +240,6 @@
     "CSV or JSON files" : {
 
     },
-    "Current plan" : {
-
-    },
-    "Custom alerts" : {
-
-    },
     "Customize your monitoring experience." : {
 
     },
@@ -258,9 +249,6 @@
     "Data & History" : {
 
     },
-    "Data & Privacy" : {
-
-    },
     "Data actions" : {
 
     },
@@ -268,12 +256,6 @@
 
     },
     "Decide when SystemScope should notify you." : {
-
-    },
-    "Detailed monitoring" : {
-
-    },
-    "Detailed monitoring, trends, custom alerts and reports" : {
 
     },
     "Device actions" : {
@@ -351,9 +333,6 @@
     "Everything stays on this iPhone. SystemScope has no account and doesn’t send your data anywhere. A speed test only contacts the test server you start it against." : {
 
     },
-    "Explore Premium" : {
-
-    },
     "Export data" : {
 
     },
@@ -367,9 +346,6 @@
 
     },
     "Format" : {
-
-    },
-    "Free" : {
 
     },
     "Generating…" : {
@@ -400,9 +376,6 @@
 
     },
     "Hiding a resource only removes it from the Monitor overview. It doesn’t turn anything off on your iPhone." : {
-
-    },
-    "Historical trends" : {
 
     },
     "History cleared" : {
@@ -459,9 +432,6 @@
     "Light" : {
 
     },
-    "Light is the SystemScope look for now. Dark and System arrive with the dark palette." : {
-
-    },
     "Low available storage · Threshold reached" : {
 
     },
@@ -481,9 +451,6 @@
 
     },
     "Make SystemScope yours." : {
-
-    },
-    "Manage" : {
 
     },
     "Manage Device" : {
@@ -522,9 +489,6 @@
     "Monitoring Preferences" : {
 
     },
-    "Monitoring reports" : {
-
-    },
     "Monitoring session reports" : {
 
     },
@@ -558,16 +522,10 @@
     "Never attached automatically. You can review everything before sending." : {
 
     },
-    "No active subscription" : {
-
-    },
     "No purchases to restore for this Apple Account." : {
 
     },
     "Not allowed" : {
-
-    },
-    "Not available yet" : {
 
     },
     "Not requested" : {
@@ -646,25 +604,13 @@
     "Partial" : {
 
     },
-    "Payment is handled by Apple. Subscriptions renew automatically unless cancelled at least 24 hours before the renewal date." : {
-
-    },
     "Permissions" : {
 
     },
     "Permissions are managed by iOS. SystemScope only asks when you use a feature that needs one." : {
 
     },
-    "Plan details" : {
-
-    },
-    "Plans" : {
-
-    },
     "Preferences reset" : {
-
-    },
-    "Premium includes" : {
 
     },
     "Preview" : {
@@ -677,9 +623,6 @@
 
     },
     "Problem report" : {
-
-    },
-    "Purchases aren’t open yet" : {
 
     },
     "Purchases restored." : {
@@ -763,13 +706,10 @@
     "Restore notification defaults" : {
 
     },
-    "Restore Purchases" : {
+    "Restores your iPhone's detected name" : {
 
     },
-    "Restores the default device name" : {
-
-    },
-    "Restores the default name. History is kept." : {
+    "Restores your iPhone's detected name. History is kept." : {
 
     },
     "Save" : {
@@ -829,9 +769,6 @@
     "Some values, such as device-wide CPU and GPU load, aren’t available to apps at all. SystemScope shows them as unavailable rather than guessing." : {
 
     },
-    "Soon" : {
-
-    },
     "Specifications" : {
 
     },
@@ -848,12 +785,6 @@
 
     },
     "Structured, with a schema version" : {
-
-    },
-    "Subscription" : {
-
-    },
-    "Subscriptions will be sold through the App Store. Prices shown come from the store configuration." : {
 
     },
     "Support" : {
@@ -882,9 +813,6 @@
 
     },
     "SystemScope is designed to collect only the information needed to provide your monitoring experience." : {
-
-    },
-    "SystemScope Premium" : {
 
     },
     "SystemScope reads your iPhone’s state through public iOS APIs while the app is open." : {
@@ -953,16 +881,10 @@
     "Unknown iPhone model" : {
 
     },
-    "Unlock the complete picture. Explore SystemScope Premium." : {
-
-    },
     "Unsaved changes" : {
 
     },
     "Update available measurements whenever you open a monitoring page." : {
-
-    },
-    "Use Premium on another iPhone with the same Apple Account" : {
 
     },
     "Used only by the barometer sensor test in Device." : {
@@ -1012,9 +934,6 @@
 
     },
     "Your settings and the device name you choose." : {
-
-    },
-    "Your SystemScope plan." : {
 
     },
     "Your SystemScope preferences will return to their default settings. Your device profile and saved history will remain unchanged." : {

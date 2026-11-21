@@ -15,7 +15,6 @@ public enum SettingsRoute: Hashable, Sendable {
     case appearance
     case data
     case export
-    case subscription
     case privacy
     case support
     case about

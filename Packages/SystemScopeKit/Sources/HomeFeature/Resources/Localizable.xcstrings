@@ -69,13 +69,22 @@
     "BC texture compression" : {
 
     },
+    "BSSID" : {
+
+    },
     "Cancel test" : {
 
     },
     "Capabilities" : {
 
     },
+    "Carrier" : {
+
+    },
     "Cellular" : {
+
+    },
+    "Cellular technology" : {
 
     },
     "Charging" : {
@@ -106,6 +115,9 @@
 
     },
     "Connection" : {
+
+    },
+    "Connection conditions" : {
 
     },
     "cores" : {
@@ -222,6 +234,9 @@
     "Low charge" : {
 
     },
+    "Low Data Mode" : {
+
+    },
     "Low Data Mode is on, so only the quick test is available." : {
 
     },
@@ -244,6 +259,9 @@
 
     },
     "Metal 3" : {
+
+    },
+    "Metered connection" : {
 
     },
     "Network" : {
@@ -342,6 +360,9 @@
     "Running hot. Performance may be reduced" : {
 
     },
+    "Security" : {
+
+    },
     "Serious" : {
 
     },
@@ -430,6 +451,12 @@
 
     },
     "Wi-Fi" : {
+
+    },
+    "Wi-Fi name" : {
+
+    },
+    "Wi-Fi name unavailable in this build" : {
 
     },
     "You're on cellular, so this test uses mobile data." : {
