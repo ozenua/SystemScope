@@ -30,6 +30,7 @@ public struct SettingsView: View {
                     }
                 }
         }
+        .backSwipe { model.goBack() }
         .task { await model.refreshStatuses() }
     }
 }

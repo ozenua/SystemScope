@@ -392,12 +392,12 @@ struct AppearanceView: View {
                 Text(L("Theme")).ssText(.section18).foregroundStyle(SSColor.textStrong)
                 HStack(spacing: 8) {
                     ForEach(UserSettings.Theme.allCases, id: \.self) { theme in
-                        ThemeOption(theme: theme, isSelected: settings.theme == theme, isAvailable: theme == .light) {
+                        ThemeOption(theme: theme, isSelected: settings.theme == theme) {
                             model.update { $0.theme = theme }
                         }
                     }
                 }
-                Text(L("Light is the SystemScope look for now. Dark and System arrive with the dark palette."))
+                Text(L("Choose Light, Dark or System to match your preference."))
                     .ssText(.caption12)
                     .foregroundStyle(SSColor.textTertiary)
             }
@@ -431,7 +431,6 @@ struct AppearanceView: View {
 struct ThemeOption: View {
     let theme: UserSettings.Theme
     let isSelected: Bool
-    let isAvailable: Bool
     let action: () -> Void
 
     var body: some View {
@@ -444,9 +443,6 @@ struct ThemeOption: View {
                     Image(isSelected ? SSArtwork.radioSelected : SSArtwork.radio).resizable().frame(width: 18, height: 18)
                     Text(AppearanceView.label(theme)).ssText(.label14).foregroundStyle(SSColor.textStrong)
                 }
-                if !isAvailable {
-                    Text(L("Soon")).ssText(.chip12).foregroundStyle(SSColor.textTertiary)
-                }
             }
             .padding(8)
             .frame(maxWidth: .infinity)
@@ -454,10 +450,7 @@ struct ThemeOption: View {
             .overlay(RoundedRectangle(cornerRadius: 20, style: .continuous).strokeBorder(isSelected ? SSColor.textStrong : SSColor.border, lineWidth: isSelected ? 2 : 1))
         }
         .buttonStyle(.plain)
-        .disabled(!isAvailable)
-        .opacity(isAvailable ? 1 : 0.6)
         .accessibilityAddTraits(isSelected ? .isSelected : [])
-        .accessibilityHint(Text(isAvailable ? "" : L("Not available yet")))
     }
 
     @ViewBuilder

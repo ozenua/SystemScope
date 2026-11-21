@@ -20,6 +20,7 @@ public struct DeviceView: View {
                     destination(route)
                 }
         }
+        .backSwipe { model.goBack() }
         .task { await model.loadIfNeeded() }
     }
 

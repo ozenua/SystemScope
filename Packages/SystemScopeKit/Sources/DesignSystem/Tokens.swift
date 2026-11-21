@@ -12,22 +12,29 @@ public extension Color {
     }
 }
 
-/// Colour tokens taken from the Figma onboarding section. Light values only:
-/// dark-mode values wait on release gate D-01 (PRD §2.5).
+private extension Color {
+    static func adaptive(light: Color, dark: Color) -> Color {
+        Color(uiColor: UIColor { traits in
+            traits.userInterfaceStyle == .dark ? UIColor(dark) : UIColor(light)
+        })
+    }
+}
+
+/// Colour tokens taken from the Figma onboarding section.
 public enum SSColor {
     public static let ink = Color(hex: 0x17191C)
-    public static let textPrimary = Color.black
-    public static let textSecondary = Color(hex: 0x5C6570)
-    public static let textTertiary = Color(hex: 0x858585)
-    public static let textMuted = Color(hex: 0x999999)
+    public static let textPrimary = Color.adaptive(light: .black, dark: .white)
+    public static let textSecondary = Color.adaptive(light: Color(hex: 0x5C6570), dark: Color(hex: 0xB7C0CA))
+    public static let textTertiary = Color.adaptive(light: Color(hex: 0x858585), dark: Color(hex: 0xA1A1A6))
+    public static let textMuted = Color.adaptive(light: Color(hex: 0x999999), dark: Color(hex: 0x7D7D84))
 
-    public static let surface = Color.white
-    public static let surfaceSubtle = Color(hex: 0xF9F9F9)
-    public static let surfaceMuted = Color(hex: 0xF5F5F5)
-    public static let hairline = Color(hex: 0xF1F1F1)
-    public static let border = Color(hex: 0xE8E7E2)
-    public static let borderStrong = Color(hex: 0xE6E6E6)
-    public static let track = Color(hex: 0xD9D9D9)
+    public static let surface = Color.adaptive(light: .white, dark: Color(hex: 0x1C1C1E))
+    public static let surfaceSubtle = Color.adaptive(light: Color(hex: 0xF9F9F9), dark: Color(hex: 0x242426))
+    public static let surfaceMuted = Color.adaptive(light: Color(hex: 0xF5F5F5), dark: Color(hex: 0x2C2C2E))
+    public static let hairline = Color.adaptive(light: Color(hex: 0xF1F1F1), dark: Color(hex: 0x38383A))
+    public static let border = Color.adaptive(light: Color(hex: 0xE8E7E2), dark: Color(hex: 0x48484A))
+    public static let borderStrong = Color.adaptive(light: Color(hex: 0xE6E6E6), dark: Color(hex: 0x636366))
+    public static let track = Color.adaptive(light: Color(hex: 0xD9D9D9), dark: Color(hex: 0x48484A))
 
     public static let positive = Color(hex: 0x1F8547)
     public static let positiveFill = Color(hex: 0x39B96B)
@@ -50,20 +57,20 @@ public enum SSColor {
     public static let statusGreen = Color(hex: 0x45CD33)
     public static let statusGreenSurface = Color(hex: 0xE3F8D7)
     public static let chipGreen = Color(hex: 0x00F314, opacity: 0.2)
-    public static let iconChip = Color(hex: 0x121212, opacity: 0.04)
-    /// The dark frame behind the content area and tab bar.
-    public static let shell = Color(hex: 0x121212)
-    public static let sheet = Color(hex: 0xFAFAFA)
+    public static let iconChip = Color.adaptive(light: Color(hex: 0x121212, opacity: 0.04), dark: Color.white.opacity(0.08))
+    /// The frame behind the content area and tab bar.
+    public static let shell = Color.adaptive(light: Color(hex: 0x121212), dark: Color.black)
+    public static let sheet = Color.adaptive(light: Color(hex: 0xFAFAFA), dark: Color(hex: 0x1C1C1E))
     /// Device illustration stages and chips.
     public static let pastelBlue = Color(hex: 0xDCE9FF)
     public static let pastelGreen = Color(hex: 0xD8F7B8)
     public static let stage = Color(hex: 0xEEEDE8)
-    public static let chipBackground = Color(hex: 0xF5F4EF)
-    public static let errorText = Color(hex: 0xC0341F)
-    public static let textStrong = Color(hex: 0x111111)
+    public static let chipBackground = Color.adaptive(light: Color(hex: 0xF5F4EF), dark: Color(hex: 0x2C2C2E))
+    public static let errorText = Color.adaptive(light: Color(hex: 0xC0341F), dark: Color(hex: 0xFF6961))
+    public static let textStrong = Color.adaptive(light: Color(hex: 0x111111), dark: Color(hex: 0xF2F2F7))
 
-    public static let backgroundTop = Color.white
-    public static let backgroundBottom = Color(hex: 0xE5E5E5)
+    public static let backgroundTop = Color.adaptive(light: .white, dark: Color(hex: 0x111113))
+    public static let backgroundBottom = Color.adaptive(light: Color(hex: 0xE5E5E5), dark: Color(hex: 0x111113))
 
     public static let premiumGradient = LinearGradient(
         colors: [Color(hex: 0xFE6A53), Color(hex: 0xFFA489), Color(hex: 0xFDF1D1)],

@@ -26,6 +26,7 @@ public struct ActivityView: View {
                     }
                 }
         }
+        .backSwipe { model.goBack() }
         .task { await model.load() }
     }
 }

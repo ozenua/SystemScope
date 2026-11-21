@@ -177,8 +177,15 @@ struct MainTabView: View {
                 activityLog.record(ActivityObserver.event(for: result))
             }
         }
-        // Light tokens only until gate D-01 settles the dark palette.
-        .preferredColorScheme(.light)
+        .preferredColorScheme(preferredColorScheme)
+    }
+
+    private var preferredColorScheme: ColorScheme? {
+        switch environment.preferences.settings.theme {
+        case .light: .light
+        case .dark: .dark
+        case .system: nil
+        }
     }
 
     @ViewBuilder

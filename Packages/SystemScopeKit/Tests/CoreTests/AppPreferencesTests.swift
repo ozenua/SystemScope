@@ -63,6 +63,17 @@ struct AppPreferencesTests {
         #expect(preferences.setDeviceDisplayName("   ") == false)
         #expect(preferences.deviceDisplayName == "My iPhone")
     }
+
+    @Test func themePreferencePersistsAndRestores() {
+        let defaults = makeDefaults()
+        let preferences = AppPreferences(defaults: defaults)
+        preferences.settings.theme = .dark
+
+        #expect(AppPreferences(defaults: defaults).settings.theme == .dark)
+
+        preferences.resetPreferences()
+        #expect(preferences.settings.theme == .light)
+    }
 }
 
 @MainActor

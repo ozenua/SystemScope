@@ -45,6 +45,7 @@ public struct MonitorView: View {
                     }
                 }
         }
+        .backSwipe { model.goBack() }
         // One live session while the Monitor tab is visible and the app is active
         // (PRD §7.5, §9). It continues across Monitor screens and ends on leaving.
         .task(id: isMonitoring) {

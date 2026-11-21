@@ -28,6 +28,7 @@ public struct HomeView: View {
                     .toolbar(.hidden, for: .navigationBar)
                 }
         }
+        .backSwipe { model.goBack() }
     }
 }
 
