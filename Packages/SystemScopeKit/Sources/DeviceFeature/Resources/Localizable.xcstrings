@@ -852,6 +852,9 @@
     "Permission required" : {
 
     },
+    "Photos, files and SystemScope cache" : {
+
+    },
     "Physical device memory" : {
 
     },
@@ -1027,6 +1030,9 @@
 
     },
     "Storage" : {
+
+    },
+    "Storage Manager" : {
 
     },
     "Supported" : {
