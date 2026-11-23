@@ -185,6 +185,7 @@ struct SpecificationSheet: View {
                     Text(content.detail)
                         .ssText(.body14)
                         .foregroundStyle(Color.black.opacity(0.7))
+                        .fixedSize(horizontal: false, vertical: true)
                 }
                 .padding(18)
                 .frame(maxWidth: .infinity, alignment: .leading)
@@ -223,7 +224,7 @@ struct SpecificationSheet: View {
             }
             .padding(.bottom, 16)
         }
-        .presentationDetents([.height(CGFloat(330 + content.rows.count * 42))])
+        .presentationDetents([.height(CGFloat(390 + content.rows.count * 42))])
     }
 }
 

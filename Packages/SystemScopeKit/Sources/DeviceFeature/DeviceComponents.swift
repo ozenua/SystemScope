@@ -482,19 +482,11 @@ struct SheetChrome<Content: View>: View {
     @ViewBuilder var content: Content
 
     var body: some View {
-        VStack(spacing: 0) {
-            Capsule().fill(SSColor.track).frame(width: 40, height: 5)
-                .padding(.top, 10)
-                .padding(.bottom, 14)
-                .accessibilityHidden(true)
+        SSBottomSheetChrome {
             content
                 .padding(.horizontal, horizontalPadding)
-            Spacer(minLength: 0)
+                .frame(maxHeight: .infinity, alignment: .top)
         }
-        .frame(maxWidth: .infinity)
-        .background(SSColor.surface)
-        .presentationCornerRadius(32)
-        .presentationDragIndicator(.hidden)
     }
 }
 

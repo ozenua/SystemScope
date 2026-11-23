@@ -4,7 +4,7 @@ import Foundation
 import Observation
 import UIKit
 
-/// The ten Device detail screens (DEV-02 to DEV-11 in Figma order).
+/// Device detail routes (DEV-02 to DEV-11 plus the storage manager).
 public enum DeviceRoute: String, Hashable, Sendable, CaseIterable {
     case general
     case processor
@@ -16,6 +16,7 @@ public enum DeviceRoute: String, Hashable, Sendable, CaseIterable {
     case battery
     case operatingSystem
     case graphics
+    case storageManager
 }
 
 /// Monitor screens a Device page links to. AppShell maps these to Monitor routes, so

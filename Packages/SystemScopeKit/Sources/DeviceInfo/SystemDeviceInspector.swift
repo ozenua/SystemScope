@@ -10,9 +10,14 @@ import UIKit
 /// limitation rather than measured.
 public struct SystemDeviceInspector: DeviceInspecting {
     private let catalogue: DeviceCatalogue
+    private let storageInformationProvider: StorageInformationProvider
 
-    public init(catalogue: DeviceCatalogue = .bundled) {
+    public init(
+        catalogue: DeviceCatalogue = .bundled,
+        storageInformationProvider: StorageInformationProvider = .init()
+    ) {
         self.catalogue = catalogue
+        self.storageInformationProvider = storageInformationProvider
     }
 
     public func readSnapshot(of category: ScanCategory) async -> DeviceDataResult<DeviceSummary> {
@@ -55,24 +60,30 @@ public struct SystemDeviceInspector: DeviceInspecting {
     }
 
     private func readMemoryAndStorage() -> DeviceDataResult<DeviceSummary> {
-        let home = URL(fileURLWithPath: NSHomeDirectory())
-        let values = try? home.resourceValues(forKeys: [
-            .volumeAvailableCapacityForImportantUsageKey,
-            .volumeTotalCapacityKey,
-        ])
+        let storage: StorageInformation?
+        let storageError: String?
+        do {
+            storage = try storageInformationProvider.read()
+            storageError = nil
+        } catch {
+            storage = nil
+            storageError = (error as? StorageInformationError)?.errorCode ?? String(describing: error)
+        }
         let summary = DeviceSummary(
             physicalMemoryBytes: ProcessInfo.processInfo.physicalMemory,
             memoryInUseBytes: Self.memoryInUseBytes(),
-            storageAvailableBytes: values?.volumeAvailableCapacityForImportantUsage,
-            storageTotalBytes: values?.volumeTotalCapacity.map(Int64.init)
+            storageAvailableBytes: storage?.availableBytes,
+            storageTotalBytes: storage?.totalBytes
         )
-        let hasStorage = summary.storageAvailableBytes != nil && summary.storageTotalBytes != nil
         return DeviceDataResult(
             value: summary,
             scope: .thisIPhone,
             source: "ProcessInfo.physicalMemory, URLResourceValues volume capacity",
-            status: hasStorage ? .available : .partial,
-            limitations: ["Memory in use is a provisional host_statistics64 reading pending the feasibility gate."]
+            status: storage != nil ? .available : .partial,
+            limitations: [
+                "Memory in use is a provisional host_statistics64 reading pending the feasibility gate."
+            ] + (storage == nil ? ["Storage capacity could not be read from the device volume."] : []),
+            errorCode: storageError
         )
     }
 

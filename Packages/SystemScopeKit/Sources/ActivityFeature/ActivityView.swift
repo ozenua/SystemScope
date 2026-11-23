@@ -16,14 +16,17 @@ public struct ActivityView: View {
         NavigationStack(path: $model.path) {
             ActivityOverview(model: model, onOpenMonitor: onOpenMonitor)
                 .navigationDestination(for: ActivityRoute.self) { route in
-                    switch route {
-                    case .event(let id): EventDetailView(model: model, id: id, onOpenMonitor: onOpenMonitor)
-                    case .alerts: AlertsView(model: model)
-                    case .alert(let id): AlertDetailView(model: model, id: id, onOpenMonitor: onOpenMonitor)
-                    case .sessions: SessionsView(model: model)
-                    case .session(let id): SessionDetailView(model: model, id: id, onOpenMonitor: onOpenMonitor)
-                    case .search: SearchView(model: model)
+                    Group {
+                        switch route {
+                        case .event(let id): EventDetailView(model: model, id: id, onOpenMonitor: onOpenMonitor)
+                        case .alerts: AlertsView(model: model)
+                        case .alert(let id): AlertDetailView(model: model, id: id, onOpenMonitor: onOpenMonitor)
+                        case .sessions: SessionsView(model: model)
+                        case .session(let id): SessionDetailView(model: model, id: id, onOpenMonitor: onOpenMonitor)
+                        case .search: SearchView(model: model)
+                        }
                     }
+                    .ssFadeInNavigationDestination()
                 }
         }
         .backSwipe { model.goBack() }

@@ -1,6 +1,7 @@
 import Core
 import DesignSystem
 import DeviceInfo
+import StorageFeature
 import SwiftUI
 
 /// DEV-01 · Device overview, its detail screens and sheets.
@@ -18,6 +19,7 @@ public struct DeviceView: View {
             DeviceOverview(model: model)
                 .navigationDestination(for: DeviceRoute.self) { route in
                     destination(route)
+                        .ssFadeInNavigationDestination()
                 }
         }
         .backSwipe { model.goBack() }
@@ -37,6 +39,7 @@ public struct DeviceView: View {
         case .battery: BatteryView(model: model) { onOpenMonitor(.battery) }
         case .operatingSystem: OperatingSystemView(model: model)
         case .graphics: GraphicsView(model: model) { onOpenMonitor(.gpu) }
+        case .storageManager: StorageManagerView(model: StorageManagerViewModel()) { model.goBack() }
         }
     }
 }
@@ -159,7 +162,7 @@ struct DeviceOverview: View {
                     }
                     Rectangle().fill(SSColor.border).frame(width: 1)
                     QuickSpecCell(icon: .storage, label: L("Storage"), value: DeviceFormat.storage(summary.storageTotalBytes)) {
-                        model.sheet = .spec(SpecSheets.storage(model))
+                        model.open(.storageManager)
                     }
                 }
                 .fixedSize(horizontal: false, vertical: true)
@@ -185,6 +188,7 @@ struct DeviceOverview: View {
             (.battery, .battery, L("Battery"), L("Charging and battery information")),
             (.operatingSystem, .monitorMobile, L("Operating System"), osSubtitle(details, summary)),
             (.graphics, .cube, L("Graphics"), graphicsSubtitle()),
+            (.storageManager, .storage, L("Storage Manager"), L("Photos, files and SystemScope cache")),
         ]
         return VStack(alignment: .leading, spacing: 14) {
             DeviceSectionTitle(title: L("Explore device"))

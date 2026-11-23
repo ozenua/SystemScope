@@ -582,27 +582,11 @@ struct SheetScaffold<Content: View>: View {
     @ViewBuilder var content: Content
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 0) {
-            Capsule().fill(SSColor.track).frame(width: 40, height: 5)
-                .frame(maxWidth: .infinity)
-                .padding(.top, 10)
-                .padding(.bottom, 14)
-                .accessibilityHidden(true)
-            HStack {
-                Text(title)
-                    .font(.system(size: 22, weight: .bold))
-                    .tracking(-0.66)
-                    .foregroundStyle(SSColor.textStrong)
-                    .accessibilityAddTraits(.isHeader)
-                Spacer()
-                CircleButton(icon: .close, label: L("Close"), size: 32, iconSize: 14, action: onClose)
+        SSBottomSheetChrome {
+            VStack(alignment: .leading, spacing: 0) {
+                SSBottomSheetTitleRow(title: title, closeLabel: L("Close"), onClose: onClose)
+                content
             }
-            .padding(.horizontal, 20)
-            content
         }
-        .frame(maxWidth: .infinity, alignment: .leading)
-        .background(SSColor.surface)
-        .presentationCornerRadius(32)
-        .presentationDragIndicator(.hidden)
     }
 }

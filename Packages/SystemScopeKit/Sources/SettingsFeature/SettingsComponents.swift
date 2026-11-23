@@ -288,35 +288,12 @@ struct SettingsSheetScaffold<Content: View>: View {
     @ViewBuilder var content: Content
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 0) {
-            Capsule().fill(SSColor.track).frame(width: 40, height: 5)
-                .frame(maxWidth: .infinity)
-                .padding(.top, 10)
-                .padding(.bottom, 14)
-                .accessibilityHidden(true)
-            HStack {
-                Text(title)
-                    .font(.system(size: 22, weight: .bold))
-                    .tracking(-0.66)
-                    .foregroundStyle(SSColor.textStrong)
-                    .accessibilityAddTraits(.isHeader)
-                Spacer()
-                Button(action: onClose) {
-                    SSIconView(.close, size: 14, color: SSColor.textStrong)
-                        .frame(width: 32, height: 32)
-                        .background(SSColor.hairline, in: Circle())
-                        .frame(minWidth: 44, minHeight: 44)
-                }
-                .buttonStyle(.plain)
-                .accessibilityLabel(Text(L("Close")))
+        SSBottomSheetChrome {
+            VStack(alignment: .leading, spacing: 0) {
+                SSBottomSheetTitleRow(title: title, closeLabel: L("Close"), onClose: onClose)
+                content
             }
-            .padding(.horizontal, 20)
-            content
         }
-        .frame(maxWidth: .infinity, alignment: .leading)
-        .background(SSColor.surface)
-        .presentationCornerRadius(32)
-        .presentationDragIndicator(.hidden)
     }
 }
 

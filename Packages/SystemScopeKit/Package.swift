@@ -34,8 +34,12 @@ let package = Package(
         ),
         .target(
             name: "DeviceFeature",
-            dependencies: ["Core", "DesignSystem", "DeviceInfo"],
+            dependencies: ["Core", "DesignSystem", "DeviceInfo", "StorageFeature"],
             resources: [.process("Resources")]
+        ),
+        .target(
+            name: "StorageFeature",
+            dependencies: ["Core", "DesignSystem", "DeviceInfo"]
         ),
         .target(
             name: "ActivityFeature",
@@ -57,6 +61,7 @@ let package = Package(
         .testTarget(name: "HomeFeatureTests", dependencies: ["HomeFeature", "SpeedTest"]),
         .testTarget(name: "MonitorFeatureTests", dependencies: ["MonitorFeature", "SpeedTest"]),
         .testTarget(name: "DeviceFeatureTests", dependencies: ["DeviceFeature", "DeviceInfo", "Core"]),
+        .testTarget(name: "StorageFeatureTests", dependencies: ["StorageFeature", "DeviceInfo"]),
         .testTarget(name: "ActivityStoreTests", dependencies: ["ActivityStore"]),
         .testTarget(name: "ActivityFeatureTests", dependencies: ["ActivityFeature", "ActivityStore"]),
         .testTarget(name: "SettingsFeatureTests", dependencies: ["SettingsFeature", "ActivityStore", "Core"]),

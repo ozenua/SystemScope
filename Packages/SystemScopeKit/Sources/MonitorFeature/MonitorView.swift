@@ -34,15 +34,18 @@ public struct MonitorView: View {
             overview
                 .toolbar(.hidden, for: .navigationBar)
                 .navigationDestination(for: MonitorRoute.self) { route in
-                    switch route {
-                    case .cpu: CPUMonitorView(model: model)
-                    case .memory: MemoryMonitorView(model: model)
-                    case .gpu: GPUMonitorView(model: model)
-                    case .storage: StorageMonitorView(model: model)
-                    case .battery: BatteryMonitorView(model: model)
-                    case .thermal: ThermalMonitorView(model: model)
-                    case .network: NetworkMonitorView(model: model, onRunSpeedTest: onRunSpeedTest)
+                    Group {
+                        switch route {
+                        case .cpu: CPUMonitorView(model: model)
+                        case .memory: MemoryMonitorView(model: model)
+                        case .gpu: GPUMonitorView(model: model)
+                        case .storage: StorageMonitorView(model: model)
+                        case .battery: BatteryMonitorView(model: model)
+                        case .thermal: ThermalMonitorView(model: model)
+                        case .network: NetworkMonitorView(model: model, onRunSpeedTest: onRunSpeedTest)
+                        }
                     }
+                    .ssFadeInNavigationDestination()
                 }
         }
         .backSwipe { model.goBack() }

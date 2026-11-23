@@ -26,6 +26,7 @@ public struct HomeView: View {
                         }
                     }
                     .toolbar(.hidden, for: .navigationBar)
+                    .ssFadeInNavigationDestination()
                 }
         }
         .backSwipe { model.goBack() }
@@ -45,11 +46,10 @@ private struct SpeedTestSheetModifier: ViewModifier {
 
     func body(content: Content) -> some View {
         content.sheet(isPresented: $model.isSpeedTestPresented, onDismiss: model.speedTestDismissed) {
-            SpeedTestSheet(model: model)
+            SSBottomSheetChrome {
+                SpeedTestSheet(model: model)
+            }
                 .presentationDetents([.large])
-                .presentationDragIndicator(.visible)
-                .presentationCornerRadius(32)
-                .presentationBackground(SSColor.sheet)
         }
     }
 }

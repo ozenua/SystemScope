@@ -14,6 +14,7 @@ public struct SettingsView: View {
         NavigationStack(path: $model.path) {
             SettingsOverview(model: model)
                 .navigationDestination(for: SettingsRoute.self) { route in
+                Group {
                     switch route {
                     case .myDevice: MyDeviceView(model: model)
                     case .monitoring: MonitoringSettingsView(model: model)
@@ -26,6 +27,8 @@ public struct SettingsView: View {
                     case .support: SupportView(model: model)
                     case .about: AboutView(model: model)
                     }
+                    }
+                    .ssFadeInNavigationDestination()
                 }
         }
         .backSwipe { model.goBack() }
